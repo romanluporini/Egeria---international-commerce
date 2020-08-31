@@ -1,0 +1,2576 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#switch {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  clear: both;
+  min-width: 320px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.container nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px 8px 16px;
+  border-bottom: 1px solid #fff;
+  background-color: #fff;
+  z-index: 4;
+}
+
+.container nav .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container nav .logo img {
+  width: 25px;
+  height: auto;
+}
+
+.container nav .logo img:nth-of-type(2) {
+  display: none;
+  height: 30px;
+  width: auto;
+}
+
+.container nav .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: 0 8px;
+  border-radius: 20px;
+  border: 2px solid #5960cb;
+  max-width: 400px;
+}
+
+.container nav .search-bar select {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.7em;
+  font-weight: 400;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  outline: none;
+  padding: 4px 8px 4px 8px;
+}
+
+.container nav .search-bar select:hover {
+  cursor: pointer;
+}
+
+.container nav .search-bar input {
+  width: 80%;
+  height: 28px;
+  font-size: 0.7em;
+  font-weight: 400;
+  padding-left: 8px;
+  border-radius: 20px 0 0 20px;
+  border-right: unset;
+  border: none;
+  outline: none;
+}
+
+.container nav .search-bar button {
+  border: 1px solid #5960cb;
+  background-color: #5960cb;
+  border-radius: 0 20px 20px 0;
+  width: 25%;
+  margin: -1px;
+  outline: none;
+}
+
+.container nav .search-bar button:hover {
+  cursor: pointer;
+}
+
+.container nav .search-bar button i {
+  color: #fff;
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.container nav .search-bar button p {
+  display: none;
+}
+
+.container nav .img-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  text-align: center;
+  display: none;
+}
+
+.container nav .img-box:nth-of-type(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container nav .img-box label, .container nav .img-box a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container nav .img-box label:hover, .container nav .img-box a:hover {
+  cursor: pointer;
+}
+
+.container nav .img-box i {
+  font-size: 1em;
+  color: #889299;
+  margin-bottom: 4px;
+}
+
+.container nav .img-box p {
+  font-size: 0.6em;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  color: #889299;
+  text-transform: capitalize;
+}
+
+.container .left-panel {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  max-width: 0px;
+  height: 100%;
+  background-color: #5960cb;
+}
+
+.container .left-panel .switch-box {
+  display: none;
+  width: 100%;
+  clear: both;
+  margin: 32px auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  width: calc(100% - 32px);
+  height: 20px;
+  border-radius: 10px;
+  outline: none;
+  z-index: 1;
+}
+
+.container .left-panel .switch-box::before {
+  content: 'Buyer';
+  color: #fe6047;
+  background-color: #fff;
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  display: none;
+}
+
+.container .left-panel .switch-box::after {
+  content: 'Seller';
+  color: #fff;
+  background-color: #fe6047;
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px;
+  display: none;
+}
+
+.container .left-panel .switch-box label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.container .left-panel .switch-box label:hover {
+  cursor: pointer;
+}
+
+.container .left-panel .img-box {
+  display: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 250px;
+  height: 31px;
+  margin-bottom: 4px;
+  padding-left: 16px;
+}
+
+.container .left-panel .img-box .selector {
+  display: none;
+  width: 7px;
+  height: 31px;
+  background-color: #fe6047;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  border-radius: 7px;
+}
+
+.container .left-panel .img-box i {
+  display: none;
+  color: #fff;
+  margin-right: 16px;
+  font-size: 13px;
+  opacity: 0;
+}
+
+.container .left-panel .img-box p {
+  display: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 13px;
+  opacity: 0;
+}
+
+.container .left-panel .img-box label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .left-panel .img-box label:hover {
+  cursor: pointer;
+}
+
+.container .main-customers, .container .main-suppliers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  clear: both;
+  position: relative;
+  top: 75px;
+  left: 0;
+  background-color: rgba(117, 123, 208, 0.2);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
+  padding: 16px 16px 91px 16px;
+  width: 100%;
+  clear: both;
+  background-color: rgba(117, 123, 208, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: calc(100vh - 75px);
+}
+
+.container .main-customers .home-section .user-info, .container .main-customers .home-section .wl-container, .container .main-customers .wishlist-section .user-info, .container .main-customers .wishlist-section .wl-container, .container .main-suppliers .home-section .user-info, .container .main-suppliers .home-section .wl-container, .container .main-suppliers .wishlist-section .user-info, .container .main-suppliers .wishlist-section .wl-container {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 16px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section, .container .main-customers .home-section .user-info .rfq-box, .container .main-customers .home-section .user-info .cards, .container .main-customers .home-section .user-info .inquiries, .container .main-customers .home-section .wl-container .user_info-section, .container .main-customers .home-section .wl-container .rfq-box, .container .main-customers .home-section .wl-container .cards, .container .main-customers .home-section .wl-container .inquiries, .container .main-customers .wishlist-section .user-info .user_info-section, .container .main-customers .wishlist-section .user-info .rfq-box, .container .main-customers .wishlist-section .user-info .cards, .container .main-customers .wishlist-section .user-info .inquiries, .container .main-customers .wishlist-section .wl-container .user_info-section, .container .main-customers .wishlist-section .wl-container .rfq-box, .container .main-customers .wishlist-section .wl-container .cards, .container .main-customers .wishlist-section .wl-container .inquiries, .container .main-suppliers .home-section .user-info .user_info-section, .container .main-suppliers .home-section .user-info .rfq-box, .container .main-suppliers .home-section .user-info .cards, .container .main-suppliers .home-section .user-info .inquiries, .container .main-suppliers .home-section .wl-container .user_info-section, .container .main-suppliers .home-section .wl-container .rfq-box, .container .main-suppliers .home-section .wl-container .cards, .container .main-suppliers .home-section .wl-container .inquiries, .container .main-suppliers .wishlist-section .user-info .user_info-section, .container .main-suppliers .wishlist-section .user-info .rfq-box, .container .main-suppliers .wishlist-section .user-info .cards, .container .main-suppliers .wishlist-section .user-info .inquiries, .container .main-suppliers .wishlist-section .wl-container .user_info-section, .container .main-suppliers .wishlist-section .wl-container .rfq-box, .container .main-suppliers .wishlist-section .wl-container .cards, .container .main-suppliers .wishlist-section .wl-container .inquiries {
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .home-section .user-info .user_info-section, .container .main-customers .home-section .wl-container .user_info-section, .container .main-customers .wishlist-section .user-info .user_info-section, .container .main-customers .wishlist-section .wl-container .user_info-section, .container .main-suppliers .home-section .user-info .user_info-section, .container .main-suppliers .home-section .wl-container .user_info-section, .container .main-suppliers .wishlist-section .user-info .user_info-section, .container .main-suppliers .wishlist-section .wl-container .user_info-section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers, .container .main-customers .home-section .wl-container .user_info-section .user-profile, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers, .container .main-suppliers .home-section .user-info .user_info-section .user-profile, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-color: rgba(89, 96, 203, 0.04);
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 16px;
+  width: 100%;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .user-photo, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .user-photo, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .user-photo, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .user-photo, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 24px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .user-photo i, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .user-photo i, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo i, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo i, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .user-photo i, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .user-photo i, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo i, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo i, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo i, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo i {
+  font-size: 3em;
+  color: #fe6047;
+  margin-bottom: 4px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .user-photo p, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .user-photo p, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .user-photo p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .user-photo p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .user-photo p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .user-photo p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .user-photo p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .user-photo p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #717171;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .membership, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .membership, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .membership, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .membership, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .membership, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .membership, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .membership, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .membership, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .membership p, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership p, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .membership p, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .membership p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .membership p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .membership p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .membership p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .membership p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .membership p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership p {
+  font-size: 0.6em;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  color: #717171;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .membership p a, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership p a, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .membership p a, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership p a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .membership p a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership p a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .membership p a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership p a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .membership p a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership p a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .membership p a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership p a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .membership p a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership p a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .membership p a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership p a {
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .membership a, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership a, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .membership a, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .membership a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .membership a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .membership a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .membership a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .membership a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .membership a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership a {
+  color: #2192D9;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-transform: capitalize;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .box .membership a:hover, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile .box .membership a:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .box .membership a:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .box .membership a:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box .membership a:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .box .membership a:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .box .membership a:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .box .membership a:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .box .membership a:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .box .membership a:hover {
+  cursor: pointer;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .minis-info, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .minis-info, .container .main-customers .home-section .wl-container .user_info-section .user-profile .minis-info, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .minis-info, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .minis-info, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .minis-info, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .minis-info, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .minis-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .minis-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .minis-info, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .minis-info, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .minis-info, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .minis-info, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .minis-info, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .minis-info, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .minis-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 8px;
+  padding: 16px 32px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info p, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info p, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info p, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info p, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info p, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info p, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info p, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info p, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #717171;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin-bottom: 4px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link a, .container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link a, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span {
+  color: #2192D9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link a:hover, .container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link span:hover, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link a:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link span:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link a:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link a:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link a:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link span:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link a:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link span:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link a:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link a:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link a:hover, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span:hover {
+  cursor: pointer;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-customers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .home-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-customers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-customers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-customers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .home-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .home-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .wishlist-section .user-info .user_info-section .user-profile_suppliers .mini-info .link span, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile .mini-info .link span, .container .main-suppliers .wishlist-section .wl-container .user_info-section .user-profile_suppliers .mini-info .link span {
+  color: #2192D9;
+  margin-right: 2px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers, .container .main-customers .home-section .wl-container .user_info-section .to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers, .container .main-customers .wishlist-section .user-info .user_info-section .to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers, .container .main-suppliers .home-section .user-info .user_info-section .to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers, .container .main-suppliers .home-section .wl-container .user_info-section .to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 100%;
+  clear: both;
+  padding: 16px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do h3, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers h3, .container .main-customers .home-section .wl-container .user_info-section .to-do h3, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers h3, .container .main-customers .wishlist-section .user-info .user_info-section .to-do h3, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers h3, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do h3, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers h3, .container .main-suppliers .home-section .user-info .user_info-section .to-do h3, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers h3, .container .main-suppliers .home-section .wl-container .user_info-section .to-do h3, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers h3, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do h3, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers h3, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do h3, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers h3 {
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: capitalize;
+  color: #889299;
+  padding: 16px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do i, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do i {
+  font-size: 40px;
+  margin: 0 10px 0 0;
+  color: #717171;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: #717171;
+  margin-right: 10px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do p, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do p, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do p, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do p, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do p, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do p, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do p, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do p, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do p, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do p, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do p, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do p, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do p, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #717171;
+  text-transform: capitalize;
+  margin-bottom: 32px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do p:last-of-type, .container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-customers .home-section .wl-container .user_info-section .to-do .items_to-do p:last-of-type, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-customers .wishlist-section .user-info .user_info-section .to-do .items_to-do p:last-of-type, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do .items_to-do p:last-of-type, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do p:last-of-type, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-suppliers .home-section .wl-container .user_info-section .to-do .items_to-do p:last-of-type, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do .items_to-do p:last-of-type, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do p:last-of-type, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do .items_to-do p:last-of-type, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do p:last-of-type {
+  margin-bottom: 16px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do p, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do p {
+  text-transform: uppercase;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.container .main-customers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-customers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .home-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .user-info .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2, .container .main-suppliers .wishlist-section .wl-container .user_info-section .to-do_suppliers .items_to-do .item_to-do .icon_to-do h2 {
+  color: #1E262D;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers {
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box p {
+  font-family: 'Overpass', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 54px;
+  color: #1E262D;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .box .user-photo {
+  margin: unset;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile {
+  background-color: rgba(254, 96, 71, 0.08);
+  border: 1px solid #FE6047;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+.container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-customers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-customers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-customers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-suppliers .home-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-suppliers .wishlist-section .user-info .user_info-section.suppliers .user-profile_suppliers .complete-profile a, .container .main-suppliers .wishlist-section .wl-container .user_info-section.suppliers .user-profile_suppliers .complete-profile a {
+  text-decoration: none;
+  font-family: 'Overpass',sans-serif;
+  font-weight: normal;
+  font-size: 0.7em;
+  color: #FE6047;
+}
+
+.container .main-customers .home-section .user-info .inquiries, .container .main-customers .home-section .wl-container .inquiries, .container .main-customers .wishlist-section .user-info .inquiries, .container .main-customers .wishlist-section .wl-container .inquiries, .container .main-suppliers .home-section .user-info .inquiries, .container .main-suppliers .home-section .wl-container .inquiries, .container .main-suppliers .wishlist-section .user-info .inquiries, .container .main-suppliers .wishlist-section .wl-container .inquiries {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box, .container .main-customers .home-section .wl-container .inquiries .title-box, .container .main-customers .wishlist-section .user-info .inquiries .title-box, .container .main-customers .wishlist-section .wl-container .inquiries .title-box, .container .main-suppliers .home-section .user-info .inquiries .title-box, .container .main-suppliers .home-section .wl-container .inquiries .title-box, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 16px 0;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box .title, .container .main-customers .home-section .wl-container .inquiries .title-box .title, .container .main-customers .wishlist-section .user-info .inquiries .title-box .title, .container .main-customers .wishlist-section .wl-container .inquiries .title-box .title, .container .main-suppliers .home-section .user-info .inquiries .title-box .title, .container .main-suppliers .home-section .wl-container .inquiries .title-box .title, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box .title, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box .title {
+  width: 100%;
+  clear: both;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box .title p, .container .main-customers .home-section .wl-container .inquiries .title-box .title p, .container .main-customers .wishlist-section .user-info .inquiries .title-box .title p, .container .main-customers .wishlist-section .wl-container .inquiries .title-box .title p, .container .main-suppliers .home-section .user-info .inquiries .title-box .title p, .container .main-suppliers .home-section .wl-container .inquiries .title-box .title p, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box .title p, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box .title p {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #1E262D;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box .read-status, .container .main-customers .home-section .wl-container .inquiries .title-box .read-status, .container .main-customers .wishlist-section .user-info .inquiries .title-box .read-status, .container .main-customers .wishlist-section .wl-container .inquiries .title-box .read-status, .container .main-suppliers .home-section .user-info .inquiries .title-box .read-status, .container .main-suppliers .home-section .wl-container .inquiries .title-box .read-status, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box .read-status, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box .read-status {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box .read-status .status, .container .main-customers .home-section .wl-container .inquiries .title-box .read-status .status, .container .main-customers .wishlist-section .user-info .inquiries .title-box .read-status .status, .container .main-customers .wishlist-section .wl-container .inquiries .title-box .read-status .status, .container .main-suppliers .home-section .user-info .inquiries .title-box .read-status .status, .container .main-suppliers .home-section .wl-container .inquiries .title-box .read-status .status, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box .read-status .status, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box .read-status .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.container .main-customers .home-section .user-info .inquiries .title-box .read-status .status a, .container .main-customers .home-section .wl-container .inquiries .title-box .read-status .status a, .container .main-customers .wishlist-section .user-info .inquiries .title-box .read-status .status a, .container .main-customers .wishlist-section .wl-container .inquiries .title-box .read-status .status a, .container .main-suppliers .home-section .user-info .inquiries .title-box .read-status .status a, .container .main-suppliers .home-section .wl-container .inquiries .title-box .read-status .status a, .container .main-suppliers .wishlist-section .user-info .inquiries .title-box .read-status .status a, .container .main-suppliers .wishlist-section .wl-container .inquiries .title-box .read-status .status a {
+  text-decoration: none;
+  text-align: left;
+  font-size: 0.6em;
+}
+
+.container .main-customers .home-section .user-info .inquiries .messages, .container .main-customers .home-section .wl-container .inquiries .messages, .container .main-customers .wishlist-section .user-info .inquiries .messages, .container .main-customers .wishlist-section .wl-container .inquiries .messages, .container .main-suppliers .home-section .user-info .inquiries .messages, .container .main-suppliers .home-section .wl-container .inquiries .messages, .container .main-suppliers .wishlist-section .user-info .inquiries .messages, .container .main-suppliers .wishlist-section .wl-container .inquiries .messages {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 50vh;
+}
+
+.container .main-customers .home-section .user-info .inquiries .messages p, .container .main-customers .home-section .wl-container .inquiries .messages p, .container .main-customers .wishlist-section .user-info .inquiries .messages p, .container .main-customers .wishlist-section .wl-container .inquiries .messages p, .container .main-suppliers .home-section .user-info .inquiries .messages p, .container .main-suppliers .home-section .wl-container .inquiries .messages p, .container .main-suppliers .wishlist-section .user-info .inquiries .messages p, .container .main-suppliers .wishlist-section .wl-container .inquiries .messages p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .main-customers .home-section .user-info .inquiries .messages small, .container .main-customers .home-section .wl-container .inquiries .messages small, .container .main-customers .wishlist-section .user-info .inquiries .messages small, .container .main-customers .wishlist-section .wl-container .inquiries .messages small, .container .main-suppliers .home-section .user-info .inquiries .messages small, .container .main-suppliers .home-section .wl-container .inquiries .messages small, .container .main-suppliers .wishlist-section .user-info .inquiries .messages small, .container .main-suppliers .wishlist-section .wl-container .inquiries .messages small {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.7em;
+  color: #717171;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .home-section .user-info .inquiries .messages .message-center, .container .main-customers .home-section .wl-container .inquiries .messages .message-center, .container .main-customers .wishlist-section .user-info .inquiries .messages .message-center, .container .main-customers .wishlist-section .wl-container .inquiries .messages .message-center, .container .main-suppliers .home-section .user-info .inquiries .messages .message-center, .container .main-suppliers .home-section .wl-container .inquiries .messages .message-center, .container .main-suppliers .wishlist-section .user-info .inquiries .messages .message-center, .container .main-suppliers .wishlist-section .wl-container .inquiries .messages .message-center {
+  background-color: rgba(254, 96, 71, 0.08);
+  border: 1px solid #FE6047;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+.container .main-customers .home-section .user-info .inquiries .messages .message-center a, .container .main-customers .home-section .wl-container .inquiries .messages .message-center a, .container .main-customers .wishlist-section .user-info .inquiries .messages .message-center a, .container .main-customers .wishlist-section .wl-container .inquiries .messages .message-center a, .container .main-suppliers .home-section .user-info .inquiries .messages .message-center a, .container .main-suppliers .home-section .wl-container .inquiries .messages .message-center a, .container .main-suppliers .wishlist-section .user-info .inquiries .messages .message-center a, .container .main-suppliers .wishlist-section .wl-container .inquiries .messages .message-center a {
+  text-decoration: none;
+  font-family: 'Overpass',sans-serif;
+  font-weight: normal;
+  font-size: 0.7em;
+  color: #FE6047;
+}
+
+.container .main-customers .home-section .user-info .rfq-box, .container .main-customers .home-section .wl-container .rfq-box, .container .main-customers .wishlist-section .user-info .rfq-box, .container .main-customers .wishlist-section .wl-container .rfq-box, .container .main-suppliers .home-section .user-info .rfq-box, .container .main-suppliers .home-section .wl-container .rfq-box, .container .main-suppliers .wishlist-section .user-info .rfq-box, .container .main-suppliers .wishlist-section .wl-container .rfq-box {
+  width: 100%;
+  height: 186px;
+  background-color: rgba(89, 96, 203, 0.25);
+  padding: unset;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .clip-path.left, .container .main-customers .home-section .wl-container .rfq-box .clip-path.left, .container .main-customers .wishlist-section .user-info .rfq-box .clip-path.left, .container .main-customers .wishlist-section .wl-container .rfq-box .clip-path.left, .container .main-suppliers .home-section .user-info .rfq-box .clip-path.left, .container .main-suppliers .home-section .wl-container .rfq-box .clip-path.left, .container .main-suppliers .wishlist-section .user-info .rfq-box .clip-path.left, .container .main-suppliers .wishlist-section .wl-container .rfq-box .clip-path.left {
+  width: 30%;
+  max-width: 167px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%, 64% 0, 100% 50%, 64% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 64% 0, 100% 50%, 64% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #5960cb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px 0 0 10px;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .clip-path.left i, .container .main-customers .home-section .wl-container .rfq-box .clip-path.left i, .container .main-customers .wishlist-section .user-info .rfq-box .clip-path.left i, .container .main-customers .wishlist-section .wl-container .rfq-box .clip-path.left i, .container .main-suppliers .home-section .user-info .rfq-box .clip-path.left i, .container .main-suppliers .home-section .wl-container .rfq-box .clip-path.left i, .container .main-suppliers .wishlist-section .user-info .rfq-box .clip-path.left i, .container .main-suppliers .wishlist-section .wl-container .rfq-box .clip-path.left i {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .clip-path.mid, .container .main-customers .home-section .wl-container .rfq-box .clip-path.mid, .container .main-customers .wishlist-section .user-info .rfq-box .clip-path.mid, .container .main-customers .wishlist-section .wl-container .rfq-box .clip-path.mid, .container .main-suppliers .home-section .user-info .rfq-box .clip-path.mid, .container .main-suppliers .home-section .wl-container .rfq-box .clip-path.mid, .container .main-suppliers .wishlist-section .user-info .rfq-box .clip-path.mid, .container .main-suppliers .wishlist-section .wl-container .rfq-box .clip-path.mid {
+  width: 40%;
+  max-width: 207px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%, 74% 0, 100% 50%, 74% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 74% 0, 100% 50%, 74% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(89, 96, 203, 0.6);
+}
+
+.container .main-customers .home-section .user-info .rfq-box .clip-path.right, .container .main-customers .home-section .wl-container .rfq-box .clip-path.right, .container .main-customers .wishlist-section .user-info .rfq-box .clip-path.right, .container .main-customers .wishlist-section .wl-container .rfq-box .clip-path.right, .container .main-suppliers .home-section .user-info .rfq-box .clip-path.right, .container .main-suppliers .home-section .wl-container .rfq-box .clip-path.right, .container .main-suppliers .wishlist-section .user-info .rfq-box .clip-path.right, .container .main-suppliers .wishlist-section .wl-container .rfq-box .clip-path.right {
+  width: 50%;
+  max-width: 247px;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 80% 0, 100% 50%, 80% 100%, 0% 100%);
+  background-color: rgba(89, 96, 203, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 10px 0 0 10px;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text, .container .main-customers .home-section .wl-container .rfq-box .text, .container .main-customers .wishlist-section .user-info .rfq-box .text, .container .main-customers .wishlist-section .wl-container .rfq-box .text, .container .main-suppliers .home-section .user-info .rfq-box .text, .container .main-suppliers .home-section .wl-container .rfq-box .text, .container .main-suppliers .wishlist-section .user-info .rfq-box .text, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text {
+  position: relative;
+  top: 0;
+  left: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 125px;
+  padding: 0 8px 0 16px;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text h3, .container .main-customers .home-section .wl-container .rfq-box .text h3, .container .main-customers .wishlist-section .user-info .rfq-box .text h3, .container .main-customers .wishlist-section .wl-container .rfq-box .text h3, .container .main-suppliers .home-section .user-info .rfq-box .text h3, .container .main-suppliers .home-section .wl-container .rfq-box .text h3, .container .main-suppliers .wishlist-section .user-info .rfq-box .text h3, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text h3 {
+  font-size: 1em;
+  position: relative;
+  margin-bottom: 10px;
+  color: #5960cb;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text p, .container .main-customers .home-section .wl-container .rfq-box .text p, .container .main-customers .wishlist-section .user-info .rfq-box .text p, .container .main-customers .wishlist-section .wl-container .rfq-box .text p, .container .main-suppliers .home-section .user-info .rfq-box .text p, .container .main-suppliers .home-section .wl-container .rfq-box .text p, .container .main-suppliers .wishlist-section .user-info .rfq-box .text p, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text p {
+  font-size: 0.6em;
+  position: relative;
+  color: #5960cb;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text .free-rfq, .container .main-customers .home-section .wl-container .rfq-box .text .free-rfq, .container .main-customers .wishlist-section .user-info .rfq-box .text .free-rfq, .container .main-customers .wishlist-section .wl-container .rfq-box .text .free-rfq, .container .main-suppliers .home-section .user-info .rfq-box .text .free-rfq, .container .main-suppliers .home-section .wl-container .rfq-box .text .free-rfq, .container .main-suppliers .wishlist-section .user-info .rfq-box .text .free-rfq, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text .free-rfq {
+  position: relative;
+  padding: 2px 14px;
+  border-radius: 20px;
+  border: 1px solid #5960cb;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text .free-rfq a, .container .main-customers .home-section .wl-container .rfq-box .text .free-rfq a, .container .main-customers .wishlist-section .user-info .rfq-box .text .free-rfq a, .container .main-customers .wishlist-section .wl-container .rfq-box .text .free-rfq a, .container .main-suppliers .home-section .user-info .rfq-box .text .free-rfq a, .container .main-suppliers .home-section .wl-container .rfq-box .text .free-rfq a, .container .main-suppliers .wishlist-section .user-info .rfq-box .text .free-rfq a, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text .free-rfq a {
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.6em;
+  text-align: center;
+  font-family: 'overpass',sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text .free-rfq a:hover, .container .main-customers .home-section .wl-container .rfq-box .text .free-rfq a:hover, .container .main-customers .wishlist-section .user-info .rfq-box .text .free-rfq a:hover, .container .main-customers .wishlist-section .wl-container .rfq-box .text .free-rfq a:hover, .container .main-suppliers .home-section .user-info .rfq-box .text .free-rfq a:hover, .container .main-suppliers .home-section .wl-container .rfq-box .text .free-rfq a:hover, .container .main-suppliers .wishlist-section .user-info .rfq-box .text .free-rfq a:hover, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text .free-rfq a:hover {
+  cursor: pointer;
+}
+
+.container .main-customers .home-section .user-info .rfq-box .text .free-rfq a:visited, .container .main-customers .home-section .wl-container .rfq-box .text .free-rfq a:visited, .container .main-customers .wishlist-section .user-info .rfq-box .text .free-rfq a:visited, .container .main-customers .wishlist-section .wl-container .rfq-box .text .free-rfq a:visited, .container .main-suppliers .home-section .user-info .rfq-box .text .free-rfq a:visited, .container .main-suppliers .home-section .wl-container .rfq-box .text .free-rfq a:visited, .container .main-suppliers .wishlist-section .user-info .rfq-box .text .free-rfq a:visited, .container .main-suppliers .wishlist-section .wl-container .rfq-box .text .free-rfq a:visited {
+  color: #5960cb;
+}
+
+.container .main-customers .home-section .user-info .cards, .container .main-customers .home-section .wl-container .cards, .container .main-customers .wishlist-section .user-info .cards, .container .main-customers .wishlist-section .wl-container .cards, .container .main-suppliers .home-section .user-info .cards, .container .main-suppliers .home-section .wl-container .cards, .container .main-suppliers .wishlist-section .user-info .cards, .container .main-suppliers .wishlist-section .wl-container .cards {
+  width: 100%;
+  clear: both;
+  padding: 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (220px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 220px);
+  gap: 16px;
+}
+
+.container .main-customers .home-section .user-info .cards .card-box, .container .main-customers .home-section .wl-container .cards .card-box, .container .main-customers .wishlist-section .user-info .cards .card-box, .container .main-customers .wishlist-section .wl-container .cards .card-box, .container .main-suppliers .home-section .user-info .cards .card-box, .container .main-suppliers .home-section .wl-container .cards .card-box, .container .main-suppliers .wishlist-section .user-info .cards .card-box, .container .main-suppliers .wishlist-section .wl-container .cards .card-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .home-section .user-info .cards .card, .container .main-customers .home-section .wl-container .cards .card, .container .main-customers .wishlist-section .user-info .cards .card, .container .main-customers .wishlist-section .wl-container .cards .card, .container .main-suppliers .home-section .user-info .cards .card, .container .main-suppliers .home-section .wl-container .cards .card, .container .main-suppliers .wishlist-section .user-info .cards .card, .container .main-suppliers .wishlist-section .wl-container .cards .card {
+  padding: 14px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 250px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+}
+
+.container .main-customers .home-section .user-info .cards .card .img-box, .container .main-customers .home-section .wl-container .cards .card .img-box, .container .main-customers .wishlist-section .user-info .cards .card .img-box, .container .main-customers .wishlist-section .wl-container .cards .card .img-box, .container .main-suppliers .home-section .user-info .cards .card .img-box, .container .main-suppliers .home-section .wl-container .cards .card .img-box, .container .main-suppliers .wishlist-section .user-info .cards .card .img-box, .container .main-suppliers .wishlist-section .wl-container .cards .card .img-box {
+  width: 100%;
+  border-radius: 20px;
+  background: #E5E5E5;
+  height: 165px;
+}
+
+.container .main-customers .home-section .user-info .cards .card .img-box img, .container .main-customers .home-section .wl-container .cards .card .img-box img, .container .main-customers .wishlist-section .user-info .cards .card .img-box img, .container .main-customers .wishlist-section .wl-container .cards .card .img-box img, .container .main-suppliers .home-section .user-info .cards .card .img-box img, .container .main-suppliers .home-section .wl-container .cards .card .img-box img, .container .main-suppliers .wishlist-section .user-info .cards .card .img-box img, .container .main-suppliers .wishlist-section .wl-container .cards .card .img-box img {
+  width: 175px;
+  height: 165px;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description, .container .main-customers .home-section .wl-container .cards .card .description, .container .main-customers .wishlist-section .user-info .cards .card .description, .container .main-customers .wishlist-section .wl-container .cards .card .description, .container .main-suppliers .home-section .user-info .cards .card .description, .container .main-suppliers .home-section .wl-container .cards .card .description, .container .main-suppliers .wishlist-section .user-info .cards .card .description, .container .main-suppliers .wishlist-section .wl-container .cards .card .description {
+  width: 100%;
+  padding: 8px;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .first-line, .container .main-customers .home-section .wl-container .cards .card .description .first-line, .container .main-customers .wishlist-section .user-info .cards .card .description .first-line, .container .main-customers .wishlist-section .wl-container .cards .card .description .first-line, .container .main-suppliers .home-section .user-info .cards .card .description .first-line, .container .main-suppliers .home-section .wl-container .cards .card .description .first-line, .container .main-suppliers .wishlist-section .user-info .cards .card .description .first-line, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .first-line {
+  width: 100%;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .first-line .epigraph p, .container .main-customers .home-section .wl-container .cards .card .description .first-line .epigraph p, .container .main-customers .wishlist-section .user-info .cards .card .description .first-line .epigraph p, .container .main-customers .wishlist-section .wl-container .cards .card .description .first-line .epigraph p, .container .main-suppliers .home-section .user-info .cards .card .description .first-line .epigraph p, .container .main-suppliers .home-section .wl-container .cards .card .description .first-line .epigraph p, .container .main-suppliers .wishlist-section .user-info .cards .card .description .first-line .epigraph p, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .first-line .epigraph p {
+  font-family: 'overpass', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #717171;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .first-line .epigraph p span, .container .main-customers .home-section .wl-container .cards .card .description .first-line .epigraph p span, .container .main-customers .wishlist-section .user-info .cards .card .description .first-line .epigraph p span, .container .main-customers .wishlist-section .wl-container .cards .card .description .first-line .epigraph p span, .container .main-suppliers .home-section .user-info .cards .card .description .first-line .epigraph p span, .container .main-suppliers .home-section .wl-container .cards .card .description .first-line .epigraph p span, .container .main-suppliers .wishlist-section .user-info .cards .card .description .first-line .epigraph p span, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .first-line .epigraph p span {
+  font-weight: 400;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .first-line .epigraph .item-name p, .container .main-customers .home-section .wl-container .cards .card .description .first-line .epigraph .item-name p, .container .main-customers .wishlist-section .user-info .cards .card .description .first-line .epigraph .item-name p, .container .main-customers .wishlist-section .wl-container .cards .card .description .first-line .epigraph .item-name p, .container .main-suppliers .home-section .user-info .cards .card .description .first-line .epigraph .item-name p, .container .main-suppliers .home-section .wl-container .cards .card .description .first-line .epigraph .item-name p, .container .main-suppliers .wishlist-section .user-info .cards .card .description .first-line .epigraph .item-name p, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .first-line .epigraph .item-name p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .star-rate, .container .main-customers .home-section .wl-container .cards .card .description .star-rate, .container .main-customers .wishlist-section .user-info .cards .card .description .star-rate, .container .main-customers .wishlist-section .wl-container .cards .card .description .star-rate, .container .main-suppliers .home-section .user-info .cards .card .description .star-rate, .container .main-suppliers .home-section .wl-container .cards .card .description .star-rate, .container .main-suppliers .wishlist-section .user-info .cards .card .description .star-rate, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .star-rate {
+  width: 100%;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .star-rate i, .container .main-customers .home-section .wl-container .cards .card .description .star-rate i, .container .main-customers .wishlist-section .user-info .cards .card .description .star-rate i, .container .main-customers .wishlist-section .wl-container .cards .card .description .star-rate i, .container .main-suppliers .home-section .user-info .cards .card .description .star-rate i, .container .main-suppliers .home-section .wl-container .cards .card .description .star-rate i, .container .main-suppliers .wishlist-section .user-info .cards .card .description .star-rate i, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .star-rate i {
+  font-size: 12px;
+  color: #F08019;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .bottom-line, .container .main-customers .home-section .wl-container .cards .card .description .bottom-line, .container .main-customers .wishlist-section .user-info .cards .card .description .bottom-line, .container .main-customers .wishlist-section .wl-container .cards .card .description .bottom-line, .container .main-suppliers .home-section .user-info .cards .card .description .bottom-line, .container .main-suppliers .home-section .wl-container .cards .card .description .bottom-line, .container .main-suppliers .wishlist-section .user-info .cards .card .description .bottom-line, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .bottom-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .bottom-line small, .container .main-customers .home-section .wl-container .cards .card .description .bottom-line small, .container .main-customers .wishlist-section .user-info .cards .card .description .bottom-line small, .container .main-customers .wishlist-section .wl-container .cards .card .description .bottom-line small, .container .main-suppliers .home-section .user-info .cards .card .description .bottom-line small, .container .main-suppliers .home-section .wl-container .cards .card .description .bottom-line small, .container .main-suppliers .wishlist-section .user-info .cards .card .description .bottom-line small, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .bottom-line small {
+  color: #717171;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .bottom-line .price, .container .main-customers .home-section .wl-container .cards .card .description .bottom-line .price, .container .main-customers .wishlist-section .user-info .cards .card .description .bottom-line .price, .container .main-customers .wishlist-section .wl-container .cards .card .description .bottom-line .price, .container .main-suppliers .home-section .user-info .cards .card .description .bottom-line .price, .container .main-suppliers .home-section .wl-container .cards .card .description .bottom-line .price, .container .main-suppliers .wishlist-section .user-info .cards .card .description .bottom-line .price, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .bottom-line .price {
+  padding: 2px 4px;
+  background: rgba(89, 96, 203, 0.22);
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.container .main-customers .home-section .user-info .cards .card .description .bottom-line .price p, .container .main-customers .home-section .wl-container .cards .card .description .bottom-line .price p, .container .main-customers .wishlist-section .user-info .cards .card .description .bottom-line .price p, .container .main-customers .wishlist-section .wl-container .cards .card .description .bottom-line .price p, .container .main-suppliers .home-section .user-info .cards .card .description .bottom-line .price p, .container .main-suppliers .home-section .wl-container .cards .card .description .bottom-line .price p, .container .main-suppliers .wishlist-section .user-info .cards .card .description .bottom-line .price p, .container .main-suppliers .wishlist-section .wl-container .cards .card .description .bottom-line .price p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5960cb;
+}
+
+.container .main-customers .orders-section, .container .main-suppliers .orders-section {
+  padding: 16px 16px 16px 16px;
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(117, 123, 208, 0.1);
+  z-index: 1;
+}
+
+.container .main-customers .orders-section .orders-container, .container .main-suppliers .orders-section .orders-container {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 16px;
+}
+
+.container .main-customers .orders-section .orders-container .title, .container .main-suppliers .orders-section .orders-container .title {
+  width: 100%;
+  clear: both;
+}
+
+.container .main-customers .orders-section .orders-container .title h1, .container .main-suppliers .orders-section .orders-container .title h1 {
+  font-family: 'Overpass',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 55px;
+  color: #1E262D;
+}
+
+.container .main-customers .orders-section .orders-container .notice, .container .main-suppliers .orders-section .orders-container .notice {
+  background: #FEFEE6;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .orders-section .orders-container .notice .img-box, .container .main-suppliers .orders-section .orders-container .notice .img-box {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .orders-section .orders-container .notice .img-box i, .container .main-suppliers .orders-section .orders-container .notice .img-box i {
+  color: #000;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.container .main-customers .orders-section .orders-container .notice .img-box h3, .container .main-suppliers .orders-section .orders-container .notice .img-box h3 {
+  font-family: 'overpass', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.container .main-customers .orders-section .orders-container .notice p, .container .main-suppliers .orders-section .orders-container .notice p {
+  font-family: 'overpass', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: #717171;
+}
+
+.container .main-customers .orders-section .orders-container .notice p a, .container .main-suppliers .orders-section .orders-container .notice p a {
+  color: #2192D9;
+  text-decoration: none;
+}
+
+.container .main-customers .orders-section .orders-container .notice p:first-of-type, .container .main-suppliers .orders-section .orders-container .notice p:first-of-type {
+  margin-bottom: 4px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard, .container .main-suppliers .orders-section .orders-container .status-dashboard {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard input[type="radio"], .container .main-suppliers .orders-section .orders-container .status-dashboard input[type="radio"] {
+  display: none;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .order-status, .container .main-suppliers .orders-section .orders-container .status-dashboard .order-status {
+  width: 100%;
+  max-width: 450px;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .order-status .status, .container .main-suppliers .orders-section .orders-container .status-dashboard .order-status .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  margin: 0 4px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .order-status .status label, .container .main-suppliers .orders-section .orders-container .status-dashboard .order-status .status label {
+  font-family: 'overpass',sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: #464C52;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard form, .container .main-suppliers .orders-section .orders-container .status-dashboard form {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters {
+  width: 100%;
+  clear: both;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line {
+  width: 100%;
+  clear: both;
+  margin-bottom: 16px;
+  max-width: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  margin: 0 0 16px 0;
+  max-width: 550px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar input[type="text"], .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar input[type="text"] {
+  width: 80%;
+  border-radius: 40px 0 0 40px;
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 0.7em;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar button, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar button {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 40px 40px 0;
+  border: none;
+  outline: none;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar button i, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .search-bar button i {
+  color: #464C52;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .march, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .march {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .march p, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .march p {
+  position: relative;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .march p label, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .march p label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .march input[type="checkbox"], .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .march input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .st-line .march p::before, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .st-line .march p::before {
+  content: 'march';
+  padding: 2px 8px;
+  font-family: 'Overpass',sans-serif;
+  color: #FE6047;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 21px;
+  background-color: rgba(254, 96, 71, 0.08);
+  border: 1px solid #FE6047;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 0.7em;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .nd-line, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .nd-line {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 8px 0 16px 0;
+  width: 100%;
+  clear: both;
+  max-width: 85%;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .nd-line .select, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .nd-line .select {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 16px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .nd-line .select select, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .nd-line .select select {
+  width: 100%;
+  max-width: 170px;
+  clear: both;
+  margin: 8px 0 16px 0;
+  padding: 4px 8px;
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  outline: none;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .nd-line .select option, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .nd-line .select option {
+  font-family: 'overpass', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 19px;
+  color: #717171;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters .nd-line .select p, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters .nd-line .select p {
+  font-family: 'overpass', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #464C52;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters small input, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters small input {
+  margin-top: 32px;
+  color: #2192D9;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  background-color: unset;
+  width: 100%;
+  text-align: left;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .filters small input:hover, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters small input:hover {
+  cursor: pointer;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list {
+  margin-top: 16px;
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .fields, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .fields {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #E5E5E5;
+  border-radius: 10px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .fields label, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .fields label {
+  font-family: 'overpass', sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  line-height: 21px;
+  color: #464C52;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .list, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .list {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .list p, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .list p {
+  font-family: 'overpass',sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #717171;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .prev, .container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .next, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .prev, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .next {
+  background-color: #E5E5E5;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  padding: 4px 24px 4px 16px;
+  margin: 4px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .prev i, .container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .next i, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .prev i, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .next i {
+  color: #717171;
+  font-size: 0.8em;
+  margin: 0 8px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .prev p, .container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .next p, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .prev p, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .next p {
+  font-family: 'overpass',sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  text-align: center;
+  color: #717171;
+  margin-bottom: 2px;
+  text-transform: capitalize;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .next, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .next {
+  padding: 4px 16px 4px 24px;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .num, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .num {
+  background: #FE6047;
+  border-radius: 10px;
+  width: 15%;
+  padding: 4px;
+  margin: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages .num p, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages .num p {
+  color: #FFFFFF;
+}
+
+.container .main-customers .orders-section .orders-container .status-dashboard .results-list .pages p, .container .main-suppliers .orders-section .orders-container .status-dashboard .results-list .pages p {
+  font-family: 'overpass', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  display: inline;
+}
+
+.container .main-customers .messages-section, .container .main-suppliers .messages-section {
+  padding: 16px 16px 91px 16px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .main-customers .messages-section .messages-container, .container .main-suppliers .messages-section .messages-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper, .container .main-suppliers .messages-section .messages-container .wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search, .container .main-customers .messages-section .messages-container .wrapper .chats, .container .main-customers .messages-section .messages-container .wrapper .down-app, .container .main-suppliers .messages-section .messages-container .wrapper .search, .container .main-suppliers .messages-section .messages-container .wrapper .chats, .container .main-suppliers .messages-section .messages-container .wrapper .down-app {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  min-height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar, .container .main-customers .messages-section .messages-container .wrapper .search .text, .container .main-customers .messages-section .messages-container .wrapper .search .text-app, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar, .container .main-customers .messages-section .messages-container .wrapper .chats .text, .container .main-customers .messages-section .messages-container .wrapper .chats .text-app, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar, .container .main-customers .messages-section .messages-container .wrapper .down-app .text, .container .main-customers .messages-section .messages-container .wrapper .down-app .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .search .text, .container .main-suppliers .messages-section .messages-container .wrapper .search .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text-app {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  margin: 0 0 16px 0;
+  background-color: #d3d3d3;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar input[type="text"], .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"], .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"], .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar input[type="text"], .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"], .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"] {
+  max-width: 550px;
+  width: 100%;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 8px 24px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::-webkit-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::-webkit-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::-webkit-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::-webkit-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::-webkit-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::-webkit-input-placeholder {
+  color: #717171;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]:-ms-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]:-ms-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]:-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]:-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]:-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]:-ms-input-placeholder {
+  color: #717171;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::-ms-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::-ms-input-placeholder, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::-ms-input-placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::-ms-input-placeholder {
+  color: #717171;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::placeholder, .container .main-customers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::placeholder, .container .main-customers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .search .search-bar input[type="text"]::placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .chats .search-bar input[type="text"]::placeholder, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .search-bar input[type="text"]::placeholder {
+  color: #717171;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .text p, .container .main-customers .messages-section .messages-container .wrapper .chats .text p, .container .main-customers .messages-section .messages-container .wrapper .down-app .text p, .container .main-suppliers .messages-section .messages-container .wrapper .search .text p, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text p, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text p {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: #000000;
+  text-align: center;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .text-app, .container .main-customers .messages-section .messages-container .wrapper .chats .text-app, .container .main-customers .messages-section .messages-container .wrapper .down-app .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .search .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text-app, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .text-app p, .container .main-customers .messages-section .messages-container .wrapper .chats .text-app p, .container .main-customers .messages-section .messages-container .wrapper .down-app .text-app p, .container .main-suppliers .messages-section .messages-container .wrapper .search .text-app p, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text-app p, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text-app p {
+  font-family: 'Overpass',sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #000000;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search .text-app a, .container .main-customers .messages-section .messages-container .wrapper .chats .text-app a, .container .main-customers .messages-section .messages-container .wrapper .down-app .text-app a, .container .main-suppliers .messages-section .messages-container .wrapper .search .text-app a, .container .main-suppliers .messages-section .messages-container .wrapper .chats .text-app a, .container .main-suppliers .messages-section .messages-container .wrapper .down-app .text-app a {
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: #FE6047;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .search, .container .main-suppliers .messages-section .messages-container .wrapper .search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 450px;
+  min-height: auto;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .chats, .container .main-suppliers .messages-section .messages-container .wrapper .chats {
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.container .main-customers .messages-section .messages-container .wrapper .down-app, .container .main-suppliers .messages-section .messages-container .wrapper .down-app {
+  min-height: 50vh;
+}
+
+.container .main-customers .myEgeria-section, .container .main-customers .notifications-section, .container .main-suppliers .myEgeria-section, .container .main-suppliers .notifications-section {
+  padding: 16px;
+  background-color: rgba(117, 123, 208, 0.2);
+  font-family: 'overpass',sans-serif;
+  min-height: 100vh;
+}
+
+.container .main-customers .myEgeria-section .title, .container .main-customers .myEgeria-section .panel, .container .main-customers .notifications-section .title, .container .main-customers .notifications-section .panel, .container .main-suppliers .myEgeria-section .title, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .notifications-section .title, .container .main-suppliers .notifications-section .panel {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  clear: both;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .myEgeria-section .title h1, .container .main-customers .myEgeria-section .title h2, .container .main-customers .myEgeria-section .title p, .container .main-customers .myEgeria-section .panel h1, .container .main-customers .myEgeria-section .panel h2, .container .main-customers .myEgeria-section .panel p, .container .main-customers .notifications-section .title h1, .container .main-customers .notifications-section .title h2, .container .main-customers .notifications-section .title p, .container .main-customers .notifications-section .panel h1, .container .main-customers .notifications-section .panel h2, .container .main-customers .notifications-section .panel p, .container .main-suppliers .myEgeria-section .title h1, .container .main-suppliers .myEgeria-section .title h2, .container .main-suppliers .myEgeria-section .title p, .container .main-suppliers .myEgeria-section .panel h1, .container .main-suppliers .myEgeria-section .panel h2, .container .main-suppliers .myEgeria-section .panel p, .container .main-suppliers .notifications-section .title h1, .container .main-suppliers .notifications-section .title h2, .container .main-suppliers .notifications-section .title p, .container .main-suppliers .notifications-section .panel h1, .container .main-suppliers .notifications-section .panel h2, .container .main-suppliers .notifications-section .panel p {
+  font-size: 1.2em;
+  color: #000;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.container .main-customers .myEgeria-section .title h1 h2, .container .main-customers .myEgeria-section .title h2 h2, .container .main-customers .myEgeria-section .title p h2, .container .main-customers .myEgeria-section .panel h1 h2, .container .main-customers .myEgeria-section .panel h2 h2, .container .main-customers .myEgeria-section .panel p h2, .container .main-customers .notifications-section .title h1 h2, .container .main-customers .notifications-section .title h2 h2, .container .main-customers .notifications-section .title p h2, .container .main-customers .notifications-section .panel h1 h2, .container .main-customers .notifications-section .panel h2 h2, .container .main-customers .notifications-section .panel p h2, .container .main-suppliers .myEgeria-section .title h1 h2, .container .main-suppliers .myEgeria-section .title h2 h2, .container .main-suppliers .myEgeria-section .title p h2, .container .main-suppliers .myEgeria-section .panel h1 h2, .container .main-suppliers .myEgeria-section .panel h2 h2, .container .main-suppliers .myEgeria-section .panel p h2, .container .main-suppliers .notifications-section .title h1 h2, .container .main-suppliers .notifications-section .title h2 h2, .container .main-suppliers .notifications-section .title p h2, .container .main-suppliers .notifications-section .panel h1 h2, .container .main-suppliers .notifications-section .panel h2 h2, .container .main-suppliers .notifications-section .panel p h2 {
+  font-size: 1em;
+}
+
+.container .main-customers .myEgeria-section .title h1 p, .container .main-customers .myEgeria-section .title h2 p, .container .main-customers .myEgeria-section .title p p, .container .main-customers .myEgeria-section .panel h1 p, .container .main-customers .myEgeria-section .panel h2 p, .container .main-customers .myEgeria-section .panel p p, .container .main-customers .notifications-section .title h1 p, .container .main-customers .notifications-section .title h2 p, .container .main-customers .notifications-section .title p p, .container .main-customers .notifications-section .panel h1 p, .container .main-customers .notifications-section .panel h2 p, .container .main-customers .notifications-section .panel p p, .container .main-suppliers .myEgeria-section .title h1 p, .container .main-suppliers .myEgeria-section .title h2 p, .container .main-suppliers .myEgeria-section .title p p, .container .main-suppliers .myEgeria-section .panel h1 p, .container .main-suppliers .myEgeria-section .panel h2 p, .container .main-suppliers .myEgeria-section .panel p p, .container .main-suppliers .notifications-section .title h1 p, .container .main-suppliers .notifications-section .title h2 p, .container .main-suppliers .notifications-section .title p p, .container .main-suppliers .notifications-section .panel h1 p, .container .main-suppliers .notifications-section .panel h2 p, .container .main-suppliers .notifications-section .panel p p {
+  font-size: 0.8em;
+}
+
+.container .main-customers .myEgeria-section .title h1 p a, .container .main-customers .myEgeria-section .title h2 p a, .container .main-customers .myEgeria-section .title p p a, .container .main-customers .myEgeria-section .panel h1 p a, .container .main-customers .myEgeria-section .panel h2 p a, .container .main-customers .myEgeria-section .panel p p a, .container .main-customers .notifications-section .title h1 p a, .container .main-customers .notifications-section .title h2 p a, .container .main-customers .notifications-section .title p p a, .container .main-customers .notifications-section .panel h1 p a, .container .main-customers .notifications-section .panel h2 p a, .container .main-customers .notifications-section .panel p p a, .container .main-suppliers .myEgeria-section .title h1 p a, .container .main-suppliers .myEgeria-section .title h2 p a, .container .main-suppliers .myEgeria-section .title p p a, .container .main-suppliers .myEgeria-section .panel h1 p a, .container .main-suppliers .myEgeria-section .panel h2 p a, .container .main-suppliers .myEgeria-section .panel p p a, .container .main-suppliers .notifications-section .title h1 p a, .container .main-suppliers .notifications-section .title h2 p a, .container .main-suppliers .notifications-section .title p p a, .container .main-suppliers .notifications-section .panel h1 p a, .container .main-suppliers .notifications-section .panel h2 p a, .container .main-suppliers .notifications-section .panel p p a {
+  text-decoration: none;
+}
+
+.container .main-customers .myEgeria-section .title h1 p a:hover, .container .main-customers .myEgeria-section .title h2 p a:hover, .container .main-customers .myEgeria-section .title p p a:hover, .container .main-customers .myEgeria-section .panel h1 p a:hover, .container .main-customers .myEgeria-section .panel h2 p a:hover, .container .main-customers .myEgeria-section .panel p p a:hover, .container .main-customers .notifications-section .title h1 p a:hover, .container .main-customers .notifications-section .title h2 p a:hover, .container .main-customers .notifications-section .title p p a:hover, .container .main-customers .notifications-section .panel h1 p a:hover, .container .main-customers .notifications-section .panel h2 p a:hover, .container .main-customers .notifications-section .panel p p a:hover, .container .main-suppliers .myEgeria-section .title h1 p a:hover, .container .main-suppliers .myEgeria-section .title h2 p a:hover, .container .main-suppliers .myEgeria-section .title p p a:hover, .container .main-suppliers .myEgeria-section .panel h1 p a:hover, .container .main-suppliers .myEgeria-section .panel h2 p a:hover, .container .main-suppliers .myEgeria-section .panel p p a:hover, .container .main-suppliers .notifications-section .title h1 p a:hover, .container .main-suppliers .notifications-section .title h2 p a:hover, .container .main-suppliers .notifications-section .title p p a:hover, .container .main-suppliers .notifications-section .panel h1 p a:hover, .container .main-suppliers .notifications-section .panel h2 p a:hover, .container .main-suppliers .notifications-section .panel p p a:hover {
+  cursor: pointer;
+  color: #fe6047;
+}
+
+.container .main-customers .myEgeria-section .title .item, .container .main-customers .myEgeria-section .panel .item, .container .main-customers .notifications-section .title .item, .container .main-customers .notifications-section .panel .item, .container .main-suppliers .myEgeria-section .title .item, .container .main-suppliers .myEgeria-section .panel .item, .container .main-suppliers .notifications-section .title .item, .container .main-suppliers .notifications-section .panel .item {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .main-customers .myEgeria-section .title .item h1, .container .main-customers .myEgeria-section .panel .item h1, .container .main-customers .notifications-section .title .item h1, .container .main-customers .notifications-section .panel .item h1, .container .main-suppliers .myEgeria-section .title .item h1, .container .main-suppliers .myEgeria-section .panel .item h1, .container .main-suppliers .notifications-section .title .item h1, .container .main-suppliers .notifications-section .panel .item h1 {
+  margin-right: 16px;
+  font-size: 1.6em;
+}
+
+.container .main-customers .myEgeria-section .title .item p, .container .main-customers .myEgeria-section .panel .item p, .container .main-customers .notifications-section .title .item p, .container .main-customers .notifications-section .panel .item p, .container .main-suppliers .myEgeria-section .title .item p, .container .main-suppliers .myEgeria-section .panel .item p, .container .main-suppliers .notifications-section .title .item p, .container .main-suppliers .notifications-section .panel .item p {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container .main-customers .myEgeria-section .title .item i, .container .main-customers .myEgeria-section .panel .item i, .container .main-customers .notifications-section .title .item i, .container .main-customers .notifications-section .panel .item i, .container .main-suppliers .myEgeria-section .title .item i, .container .main-suppliers .myEgeria-section .panel .item i, .container .main-suppliers .notifications-section .title .item i, .container .main-suppliers .notifications-section .panel .item i {
+  position: absolute;
+  right: 0;
+}
+
+.container .main-customers .myEgeria-section .panel, .container .main-customers .notifications-section .panel, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .notifications-section .panel {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px;
+  align-self: flex-start;
+}
+
+.container .my-egeria {
+  display: none;
+}
+
+.container .bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 8px 16px 8px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #fff;
+  background-color: #fff;
+  z-index: 4;
+}
+
+.container .bottom-menu .img-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .bottom-menu .img-box label, .container .bottom-menu .img-box a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container .bottom-menu .img-box label:active ~ i, .container .bottom-menu .img-box label:active ~ p, .container .bottom-menu .img-box label:hover ~ i, .container .bottom-menu .img-box label:hover ~ p, .container .bottom-menu .img-box a:active ~ i, .container .bottom-menu .img-box a:active ~ p, .container .bottom-menu .img-box a:hover ~ i, .container .bottom-menu .img-box a:hover ~ p {
+  color: #fe6047;
+}
+
+.container .bottom-menu .img-box i {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #8489c9;
+}
+
+.container .bottom-menu .img-box p {
+  font-size: 0.6em;
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  color: #8489c9;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 475px) {
+  .container nav .search-bar select {
+    display: block;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .user-profile .box, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .box {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .user-profile .minis-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .minis-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .user-profile .minis-info .mini-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .minis-info .mini-info {
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    padding: 16px;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .to-do h3, .container .main-suppliers .home-section .user-info .user_info-section .to-do h3 {
+    padding: unset;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .to-do .items_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do .items_to-do {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 32px 0;
+  }
+  .container .main-customers .home-section .user-info .rfq-box .text, .container .main-suppliers .home-section .user-info .rfq-box .text {
+    left: 125px;
+    max-width: 200px;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-customers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box .user-photo, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .user-profile_suppliers .box p {
+    margin-right: 8px;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 450px;
+  }
+  .container .main-customers .orders-section .orders-container .status-dashboard .filters form .st-line, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .st-line {
+    -ms-grid-columns: (minmax(auto, 500px))[auto-fit] 100px;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 500px)) 100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .main-customers .orders-section .orders-container .status-dashboard .filters form .st-line .search-bar, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .st-line .search-bar {
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container nav .logo img:first-of-type {
+    display: none;
+  }
+  .container nav .logo img:nth-of-type(2) {
+    display: block;
+  }
+  .container nav .search-bar select {
+    font-size: 0.8em;
+  }
+  .container nav .search-bar input {
+    font-size: 0.8em;
+  }
+  .container nav .search-bar button {
+    width: 35%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1em;
+  }
+  .container nav .search-bar button i {
+    margin-right: 8px;
+  }
+  .container nav .search-bar button p {
+    display: block;
+    color: #fff;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .user-profile, .container .main-suppliers .home-section .user-info .user_info-section .user-profile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .user-profile .minis-info, .container .main-suppliers .home-section .user-info .user_info-section .user-profile .minis-info {
+    padding: 32px 16px 0 16px;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .main-customers .home-section .user-info .user_info-section .to-do .item_to-do, .container .main-suppliers .home-section .user-info .user_info-section .to-do .item_to-do {
+    width: auto;
+  }
+  .container .main-customers .home-section .user-info .rfq-box .text, .container .main-suppliers .home-section .user-info .rfq-box .text {
+    max-width: 250px;
+  }
+  .container .main-customers .home-section .user-info .cards, .container .main-suppliers .home-section .user-info .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (220px)[2];
+        grid-template-columns: repeat(2, 220px);
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers, .container .main-suppliers .home-section .user-info .user_info-section.suppliers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 16px;
+    height: 125px;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .box, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .box {
+    padding: unset;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .to-do_suppliers, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .to-do_suppliers {
+    height: 100%;
+    padding: unset;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do {
+    height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .container .main-customers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do .item_to-do p, .container .main-suppliers .home-section .user-info .user_info-section.suppliers .to-do_suppliers .items_to-do .item_to-do p {
+    margin-bottom: unset;
+  }
+  .container .main-customers .messages-section .messages-container, .container .main-suppliers .messages-section .messages-container {
+    height: 100%;
+  }
+  .container .main-customers .messages-section .messages-container .wrapper, .container .main-suppliers .messages-section .messages-container .wrapper {
+    height: 100%;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -ms-grid-rows: 40vh 40vh;
+        grid-template-rows: 40vh 40vh;
+  }
+  .container .main-customers .messages-section .messages-container .wrapper .search, .container .main-suppliers .messages-section .messages-container .wrapper .search {
+    max-width: 100%;
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: none;
+  }
+  .container .main-customers .messages-section .messages-container .wrapper .chats, .container .main-suppliers .messages-section .messages-container .wrapper .chats {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: none;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .container .main-customers .messages-section .messages-container .wrapper .down-app, .container .main-suppliers .messages-section .messages-container .wrapper .down-app {
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #myEgeria-tab:checked ~ .container .my-egeria {
+    display: block;
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-delay: 0.01s;
+            transition-delay: 0.01s;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .container nav .img-box:nth-of-type(5),
+  .container nav .img-box:nth-of-type(3),
+  .container nav .img-box:nth-of-type(4),
+  .container nav .img-box:nth-of-type(6),
+  .container nav .img-box:nth-of-type(7),
+  .container nav .img-box:nth-of-type(8) {
+    display: block;
+  }
+  .container .bottom-menu {
+    display: none;
+  }
+  .container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
+    padding: 32px;
+  }
+  .container .main-customers .home-section .user-info, .container .main-customers .wishlist-section .user-info, .container .main-suppliers .home-section .user-info, .container .main-suppliers .wishlist-section .user-info {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .container .main-customers .home-section .user-info .cards, .container .main-customers .wishlist-section .user-info .cards, .container .main-suppliers .home-section .user-info .cards, .container .main-suppliers .wishlist-section .user-info .cards {
+    padding: 32px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 1024px;
+  }
+  .container .main-customers .home-section .user-info .rfq-box .text, .container .main-customers .wishlist-section .user-info .rfq-box .text, .container .main-suppliers .home-section .user-info .rfq-box .text, .container .main-suppliers .wishlist-section .user-info .rfq-box .text {
+    max-width: none;
+  }
+  .container .main-customers .orders-section, .container .main-customers .messages-section, .container .main-suppliers .orders-section, .container .main-suppliers .messages-section {
+    padding: 32px;
+  }
+  .container .main-customers .orders-section .orders-container .status-dashboard .filters form .nd-line, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .nd-line {
+    -ms-grid-columns: (0.75fr)[3];
+        grid-template-columns: repeat(3, 0.75fr);
+  }
+  .container .main-customers .orders-section .orders-container .status-dashboard .filters form .nd-line .select, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .nd-line .select {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 16px;
+  }
+  .container .main-customers .orders-section .orders-container .status-dashboard .filters form .nd-line .select select, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .nd-line .select select {
+    margin: unset;
+    margin-left: 8px;
+  }
+  .container .notifications-section {
+    display: none;
+  }
+  .container .my-egeria {
+    width: 400px;
+    clear: both;
+    max-height: 250px;
+    position: fixed;
+    top: 60px;
+    right: 48px;
+    -webkit-clip-path: polygon(90% 1%, 92% 5%, 100% 5%, 100% 100%, 0 100%, 0% 11%, 0 5%, 88% 5%);
+            clip-path: polygon(90% 1%, 92% 5%, 100% 5%, 100% 100%, 0 100%, 0% 11%, 0 5%, 88% 5%);
+    background-color: #8489c9;
+    z-index: 4;
+    color: black;
+    padding: 25px;
+    padding: 32px;
+    border-radius: 10px;
+    opacity: 0;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+    display: none;
+  }
+  .container .my-egeria .dropdown-menu {
+    width: 100%;
+    clear: both;
+    color: #fff;
+  }
+  .container .my-egeria .dropdown-menu .text {
+    width: 100%;
+    clear: both;
+    margin-bottom: 32px;
+  }
+  .container .my-egeria .dropdown-menu .text p {
+    font-weight: 400;
+  }
+  .container .my-egeria .dropdown-menu .text p label:hover {
+    color: #fe6047;
+    cursor: pointer;
+  }
+  .container .my-egeria .img-box {
+    width: 100%;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .container .my-egeria .img-box i {
+    font-size: 25px;
+    margin-right: 8px;
+  }
+  .container .my-egeria .img-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container .my-egeria .img-box label:hover {
+    cursor: pointer;
+  }
+  .container .my-egeria .img-box label:hover ~ i, .container .my-egeria .img-box label:hover ~ p, .container .my-egeria .img-box label:active ~ i, .container .my-egeria .img-box label:active ~ p {
+    color: #fe6047;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container .left-panel {
+    max-width: 250px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .container .left-panel .switch-box {
+    display: block;
+  }
+  .container .left-panel .switch-box::before, .container .left-panel .switch-box::after {
+    display: block;
+  }
+  .container .left-panel .img-box > i, .container .left-panel .img-box > i + p {
+    display: block;
+    opacity: 1;
+  }
+  .container .main-customers, .container .main-suppliers {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+    -webkit-transition-property: width;
+    transition-property: width;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
+    padding: 32px;
+  }
+  .container .main-customers .home-section .user-info .cards, .container .main-customers .home-section .wl-container .cards, .container .main-customers .wishlist-section .user-info .cards, .container .main-customers .wishlist-section .wl-container .cards, .container .main-suppliers .home-section .user-info .cards, .container .main-suppliers .home-section .wl-container .cards, .container .main-suppliers .wishlist-section .user-info .cards, .container .main-suppliers .wishlist-section .wl-container .cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (220px)[4];
+        grid-template-columns: repeat(4, 220px);
+  }
+  #home-tab:checked ~ .container .left-panel .img-box:nth-of-type(2),
+  #orders-tab:checked ~ .container .left-panel .img-box:nth-of-type(3),
+  #wishList-tab:checked ~ .container .left-panel .img-box:nth-of-type(4),
+  #messages-tab:checked ~ .container .left-panel .img-box:nth-of-type(5) {
+    background-color: rgba(229, 229, 229, 0.2);
+    border-radius: 7px 0 0 7px;
+  }
+  #home-tab:checked ~ .container .left-panel .img-box:nth-of-type(2) .selector,
+  #orders-tab:checked ~ .container .left-panel .img-box:nth-of-type(3) .selector,
+  #wishList-tab:checked ~ .container .left-panel .img-box:nth-of-type(4) .selector,
+  #messages-tab:checked ~ .container .left-panel .img-box:nth-of-type(5) .selector {
+    display: block;
+  }
+}
+
+#home-tab:not(:checked) ~ .container main .home-section,
+#notification-tab:not(:checked) ~ .container main .notifications-section,
+#orders-tab:not(:checked) ~ .container main .orders-section,
+#cart-tab:not(:checked) ~ .container main .cart-section,
+#messages-tab:not(:checked) ~ .container main .messages-section,
+#myEgeria-tab:not(:checked) ~ .container main .myEgeria-section,
+#wishList-tab:not(:checked) ~ .container main .wishlist-section {
+  display: none;
+}
+
+#home-tab:checked ~ .container main .home-section,
+#notification-tab:checked ~ .container main .notifications-section,
+#orders-tab:checked ~ .container main .orders-section,
+#cart-tab:checked ~ .container main .home-section,
+#messages-tab:checked ~ .container main .messages-section,
+#wishList-tab:checked ~ .container main .wishlist-section {
+  display: block;
+}
+
+#home-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(1) i,
+#home-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(1) p {
+  color: #fe6047;
+}
+
+#wishList-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(2) i,
+#wishList-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(2) p {
+  color: #fe6047;
+}
+
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(4) i,
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(4) p {
+  color: #fe6047;
+}
+
+#myEgeria-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) i,
+#myEgeria-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) p {
+  color: #fe6047;
+}
+
+#notification-tab:checked ~ .container nav .img-box:nth-of-type(2) i,
+#notification-tab:checked ~ .container nav .img-box:nth-of-type(2) p {
+  color: #fe6047;
+}
+
+#home-tab:checked ~ .container nav .img-box:nth-of-type(3) i,
+#home-tab:checked ~ .container nav .img-box:nth-of-type(3) p {
+  color: #fe6047;
+}
+
+#cart-tab:checked ~ .container nav .img-box:nth-of-type(6) i,
+#cart-tab:checked ~ .container nav .img-box:nth-of-type(6) p {
+  color: #fe6047;
+}
+
+#myEgeria-tab:checked ~ .container nav .img-box:nth-of-type(7) i,
+#myEgeria-tab:checked ~ .container nav .img-box:nth-of-type(7) p {
+  color: #fe6047;
+}
+
+#switch:checked ~ .container .main-suppliers {
+  display: none;
+}
+
+#switch:checked ~ .container .main-customers {
+  display: block;
+}
+
+#switch:checked ~ .container .left-panel .switch-box::after {
+  background-color: #fff;
+  color: #fe6047;
+}
+
+#switch:checked ~ .container .left-panel .switch-box::before {
+  background-color: #fe6047;
+  color: #fff;
+}
+
+#switch:not(:checked) ~ .container .left-panel .img-box:nth-of-type(4) {
+  display: none;
+}
+
+#switch:not(:checked) ~ .container .main-customers {
+  display: none;
+}
+
+#switch:not(:checked) ~ .container .main-suppliers {
+  display: block;
+}
+/*# sourceMappingURL=user-menu.css.map */

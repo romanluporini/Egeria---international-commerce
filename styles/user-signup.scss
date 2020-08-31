@@ -1,0 +1,354 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+
+.container{
+    background: linear-gradient(to bottom, rgba(89, 96, 203, 0.32) 50%, #fff 50%);
+    padding: 100px 16px; 
+    .sign-up-form, .log-in-form{
+        clear: both;
+        padding: 32px 16px;
+        background: #fff;
+        box-shadow: 7px 7px 100px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .title{
+            width: 100%;
+            clear: both;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            img{
+                width: 60%;
+                max-width: 150px;
+                display: none;
+                &:nth-of-type(2){
+                    display: block;
+                }
+            }
+        }
+        .language{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            select{
+                clear: both;
+                font-size: 1em;
+                font-weight: 400;
+                color: $default1;
+                padding: 4px 16px;
+                margin-right: 16px;
+            }
+        }
+        h1{
+            font-family: 'overpass', sans-serif;
+            font-size: 1.5em;
+            color: $default1;
+            font-weight: 700;
+        }
+        form{
+            width: 100%;
+            max-width: 450px;
+            clear: both;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            row-gap: 16px;
+            label{
+                display: flex;
+                justify-content: flex-start;
+                font-size: 1em;
+                font-weight: 400;
+                color: $default1;
+                padding: 4px 0;
+                span{
+                    color: red;
+                }
+            }
+            .name, .tel{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                border-radius: 20px;
+            }
+            .inputs{
+                width: min-content;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;  
+                .inputs-box{
+                   width: max-content;
+                    clear: both;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: row;
+                    margin-right: 16px;
+                    position: relative;
+                } 
+                i{
+                    display: none;
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    font-size: 29px;
+                }
+                input[type="radio"]{
+                    display: block;
+                    margin-left: 2px;
+                    margin-right: 4px;
+                    appearance: none;
+                    width: 25px;
+                    height: 25px;
+                    border: 1px solid $color5;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:checked{
+                        border-color: $color2;
+                        & ~ i{
+                            display: block;
+                            color: $color2;
+                        }
+                    }
+                } 
+            }
+            .text{
+                width: 100%;
+                clear: both;
+                p{
+                    text-indent: 33px;
+                    text-align: justify;
+                    color: $default1;
+                    font-size: 1em;
+                    column-rule-width: 200px;
+                }
+            }
+            .input-box{
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                font-size: 1em;
+                margin-top: 6px;
+                position: relative;
+                min-height: max-content;
+                    i{
+                        display: none;
+                        pointer-events: none;
+                    }
+                    input[type="checkbox"]{
+                        appearance: none;
+                        border: 1px solid $color5;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        position: relative;
+                        top: 25px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &:checked{
+                            border-color: $color2;
+                            & ~ i{
+                                display: block;
+                                color: $color2;
+                                font-size: 27px;
+                                position: absolute;
+                                top: 25px;
+                                left: 0;
+                            }
+                        } 
+                    }
+            }
+            .agree-button{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                height: 50px;
+                button{
+                    width: 100%;
+                    max-width: 450px;
+                    background-color: $color1;
+                    color: $default2;
+                    font-size: 1.1em;
+                    border-radius: 40px;
+                    padding: 8px 32px;
+                    appearance: none;
+                    border: none;
+                    outline: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        transform: scale(0.9);
+                        transition: 0.1s;
+                    }
+                }
+            }
+            input, select{
+                border-radius: 20px;
+                border: 1px solid #717171;
+                outline: none;
+                padding: 8px 8px 8px 16px;
+                font-size: 1em;
+                &::placeholder{
+                    font-size: 0.8em;
+                }
+            }
+            select{
+                background: none;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            input[type="number"]{
+                width: 100%;
+                margin-right: 8px;
+                &:nth-of-type(2),
+                &:nth-of-type(3)
+                {
+                    margin-left: 8px;
+                }
+                &::-webkit-inner-spin-button{
+                    display: none;
+                }
+            }
+            input[type="text"]{
+                width: 100%;
+                margin-right: 8px;
+            }
+        }
+    }   
+    .log-in-form form{
+        .password-forgot{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .input-box{
+            height: 1.6em;
+            align-items: center;
+            margin-bottom: 32px;
+            p{
+                font-size: 0.8em;
+            }
+            input[type="checkbox"]{
+                position: relative;
+                top: 0;
+                margin-right: 8px;
+                width: 1.6em;
+                height: 1.6em;
+                &:checked ~ i {
+                    top: 0;
+                    font-size: 28px;
+                }
+            } 
+        } 
+    } 
+
+}
+
+@media screen and (min-width: 475px){
+    .container{
+
+        .sign-up-form form{
+            .text p{
+                text-align: justify;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .container{
+        .log-in-form{
+            margin: 0 calc((100% - 768px) / 2);
+            form{
+                font-size: 1.2em;
+                .input-box input[type="checkbox"]:checked ~ i{
+                    font-size: 31px;
+                }
+                .title{
+                    justify-content: center;
+                    img{
+                        max-width: 200px;
+                        width: 100%;
+                        height: auto;
+                    }
+                } 
+                .language{
+                    margin: unset;
+                    justify-content: center;
+                    h1{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    .container .sign-up-form{
+        max-width: 800px;
+        margin: 0 auto;
+        form{
+            justify-content: center;
+            max-width: 768px;
+            display: grid;
+            grid-template-columns: 25% 450px;
+            gap: 32px;
+            font-size: 1.2em;
+            .title img{
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+            }
+            .language{
+                margin: unset;
+                justify-content: flex-start;
+                h1{
+                    font-size: 2em;
+                }
+            }
+            label{
+                justify-content: flex-end;
+                align-items: center;
+            }
+            input{
+                justify-content: flex-start;
+            }
+            .text{
+                grid-column: 2/2;
+            }
+            .agree-button{
+                grid-column: 2/2;
+            }
+        }
+    }
+
+}

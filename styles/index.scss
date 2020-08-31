@@ -1,0 +1,1188 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+input[type="radio"], 
+input[type="checkbox"]
+{
+    display: none;
+}
+
+.container{
+    clear: both;
+    min-width: 320px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px 16px;
+        border-bottom: 1px solid $default2;
+        background-color: $default2;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        z-index: 4;
+        .logo{
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 25px;
+                height: auto;
+            }
+            img:nth-of-type(2){
+                display: none;
+                height: 30px;
+                width: auto;
+            }
+        }
+        .icons-box{
+            width: 600px;
+            clear: both;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            .pricing-link{
+                background-color: $default2;
+                border-radius: 40px;
+                padding: 8px 24px;
+                border: 2px solid $color2;
+                a{
+                    text-decoration: none;
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: 400;
+                    font-size: 1em;
+                    color: $color2;
+                }
+                &:hover{
+                    cursor: pointer;
+                    background-color: $color2;
+                    transition-timing-function: ease;
+                    transition: 0.3s;
+                    a{
+                        color: $default2;
+                    }
+                }
+                &:active{
+                    transform: scale(0.9);
+                }
+            }
+            .img-box{
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                position: relative;
+                text-align: center;
+                display: none;
+                label, a{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                    &:active ~ i, &:active ~ p, &:hover ~ i, &:hover ~ p{
+                        color: $color1;
+                    }
+                }
+                
+                i{
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                    color: $color2-v1;
+                }
+                p{
+                    @include small-fonts($color9)
+
+                }
+
+            }
+        }
+
+    }
+    header{
+        width: 100%;
+        clear: both;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 75px;
+        left: 0;
+        .header-img{
+            width: 100%;
+            height: 600px;
+            background-image: url(/images/pexels-matthis-volquardsen-2326876.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .text{
+                z-index: 2;
+                position: relative;
+                top: 30%;
+                left: 5%;
+                width: 100%;
+                clear: both;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                h3{
+                    z-index: 2;
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: 400;
+                    font-size: 1.2em;
+                    color: #FFFFFF;
+                    span{
+                        z-index: 2;
+                        font-weight: 600;
+                        font-size: 1.2em;
+
+                    }
+                }
+            }
+            .search-bar{
+                z-index: 2;
+                position: relative;
+                top: 32%;
+                left: 5%;
+                display: flex;
+                flex-direction: row;
+                width: 90%;
+                border-radius: 20px;
+                max-width: 400px;
+                
+                input{
+                    z-index: 2;
+                    width: 80%;
+                    padding: 4px 24px;
+                    border-radius: 20px 0 0 20px;
+                    border-right: unset;
+                    border: none;
+                    outline: none;
+                    font-size: 1em;
+                    font-weight: 400;
+                    &::placeholder{
+                        color: lightgray;
+                    }
+                }
+                button{
+                    z-index: 2;
+                    border: 1px solid $color1;
+                    background-color: $color1;
+                    border-radius: 0 20px 20px 0;
+                    width: 25%;
+                    outline: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    i{
+                        z-index: 2;
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                    p{
+                        z-index: 2;
+                        display: none;
+                    }
+                }
+            }
+
+        }
+        .header-img::after{
+            content: '';
+            background: rgba(89, 96, 203, 0.4);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    }
+    main{
+        width: 100%;
+        clear: both;
+        padding: 16px;
+        position: relative;
+        bottom: 75px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        input[type="radio"]{
+            display: none;
+        }
+        .discover, .categories, .why, .best-sellers, footer{
+            width: 100%;
+            clear: both;
+            display: flex;
+            flex-direction: column;
+            background: #FFFFFF;
+            justify-content: center;
+            align-items: center;
+            
+            &.sh-container{
+                padding: 32px 16px;
+                box-shadow: 15px 15px 26px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                z-index: 3;
+            }
+            .title-discover{
+                width: 100%;
+                clear: both;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                p{
+                    text-align: center;
+                    font-family: 'Overpass',sans-serif;
+                    font-weight: 400;
+                    font-size: 1.2em;
+                    color: #000000;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                small{
+                    font-family: 'Overpass',sans-serif;
+                    text-align: center;
+                    min-width: max-content;
+                }
+            }
+
+            .title-categories, .title-best-sellers{
+                width: 100%;
+                clear: both;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #E5E5E5;
+                padding-bottom: 16px;
+                margin-bottom: 16px;
+                h1{
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: 700;
+                    font-size: 1.2em;
+                    color: #000000;
+                }
+                .filter{
+                    select{
+                        font-family: 'Overpass',sans-serif;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 0.8em;
+                        color: #717171;
+                        border: 1px solid #E5E5E5;
+                        border-radius: 40px;
+                        padding: 8px 16px;
+                        outline: none;
+                    }
+                }
+            }
+
+            .cards{
+                margin-top: 32px;
+                width: 100%;
+                clear: both;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                display: grid;
+                grid-template-columns:repeat(auto-fit, minmax(250px, 400px));
+                .card-box{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 16px;
+                }
+                .card{
+                    padding: 14px;
+                    background: #FFFFFF;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    min-width: 200px;
+                    max-width: 250px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        transform: scale(0.9);
+                        transition: 0.2s;
+                    }
+                    .img-box{
+                        width: 100%;
+                        border-radius: 20px;
+                        background: #E5E5E5;
+                        height: 165px;
+                        img{
+                            width: 175px;
+                            height: 165px;
+                        }
+
+                    }
+                    .description{
+                        width: 100%;
+                        padding: 8px;
+                        .first-line{
+                            width: 100%;
+                            .epigraph{
+                                p{
+                                    font-family: 'overpass', sans-serif;
+                                    font-weight: 300;
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    color: $color5;
+                                    span{
+                                        font-weight: 400;
+                                    }
+                                }
+                                .item-name{
+                                    p{
+                                        font-family: 'Overpass', sans-serif;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        line-height: 21px;
+                                        color: $default1;
+                                    }
+                                }
+                            }
+                        }
+                        .star-rate{
+                            width: 100%;
+                            i{
+                                font-size: 12px;
+                                color: $color10;
+                            }
+                        }
+                        .bottom-line{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            small{
+                                color: $color5;
+                            }
+                            .price{
+                                padding: 2px 4px;
+                                background: rgba(89, 96, 203, 0.22);
+                                border-radius: 5px;
+                                margin-bottom: 8px;
+                                p{
+                                    font-family: 'Overpass', sans-serif;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 21px;
+                                    color: $color2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bullets{
+                margin-top: 32px;
+                width: 100%;
+                clear: both;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                .bullet{
+                    position: relative;
+                    width: 15px;
+                    height: 15px;
+                    margin: 0 8px;
+                    border-radius: 50%;
+                    background-color: #C4C4C4;
+                    label{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .start-searching{
+                margin-top: 64px;
+                width: max-content;
+                clear: both;
+                background: rgba(89, 96, 203, 0.08);
+                border: 1px solid #5960CB;
+                box-sizing: border-box;
+                border-radius: 40px;
+                padding: 8px 16px;
+                a{
+                    text-decoration: none;
+                    color: #5960CB;
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: normal;
+                    font-size: 1em;
+                }
+                &:hover{
+                    cursor: pointer;
+                    background-color: #fff;
+                    transition: 0.3s;
+                }
+
+            }
+
+        }
+        .why.container{
+                position: relative;
+                left: -16px;
+                width: calc(100% + 64px);
+                margin-top: 64px;
+                background-color: $color2;
+                min-height: 300px;
+                h1{
+                    margin: 32px 16px 0 0;
+                    font-family: 'Overpass', sans-serif;
+                    font-weight: 700;
+                    font-size: 1.2em;
+                    color: #FFFFFF;
+                }
+                .reasons{
+                    width: 100%;
+                    clear: both;
+                    display: grid;
+                    margin: 32px 0;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+                    justify-content: center;
+                    align-items: center;
+                    .reason{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        margin: 32px 16px 32px 0;
+
+                        .number{
+                            width: 35px;
+                            min-width: 35px;
+                            height: 35px;
+                            background-color: $default2;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 8px;
+                            p{
+                                font-family: 'overpass',sans-serif;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 0.8em;
+                                color: $color2;
+                            }
+                        }
+                        .text{
+                            display: flex;
+                            flex-direction: column;
+                            p{
+                                min-width: max-content;
+                                font-family: 'overpass',sans-serif;
+                                font-weight: 700;
+                                font-size: 0.9em;
+                                color: #FFFFFF;
+                                &:nth-of-type(2){
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                    }
+                }
+        }
+        .best-sellers, .categories{
+            margin-top: 64px;
+        }
+        
+    }
+
+    .my-egeria{
+        display: none;
+    }
+
+
+    footer{
+        margin-top: 64px;
+        padding: 16px;
+        background-color: $color2;
+        min-height: 300px;
+        position: relative;
+        bottom: 75px;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        .box-left,.box-right{
+            width: 100%;
+            clear: both;
+        }
+        .img-box{
+            width: 100%;
+            clear: both;            
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            img{
+                width: 100px;
+                margin-right: 16px;
+            }
+            p{
+                color: $default2;
+                font-family: 'poppins',sans-serif;
+                font-weight: 300;
+                font-size: 1em;
+                line-height: 50px;
+                margin-top: 3px;
+            }
+
+        }
+        p{
+            text-align: left;
+            font-size: 0.8em;
+            color: $default2;
+            font-family: 'poppins',sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+        }
+        .statistics{
+            width: 100%;
+            clear: both;
+            margin-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            p{
+                min-width: max-content;
+                text-transform: capitalize;
+                span{
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .categories, .for-members{
+            width: 100%;
+            clear: both;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            
+            .title{
+                width: 100%;
+                clear: both;
+                display: flex;
+                
+                h1{
+
+                    font-family: 'Overpass',sans-serif;
+                    font-size: 1em;
+                    color: $default2;
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                }
+            }
+            .links{
+                width: 100%;
+                clear: both;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-bottom: 16px;
+                a{
+                    font-family: 'overpass',sans-serif;
+                    font-size: 1em;
+                    color: $default2;
+                    font-weight: 300;
+                    text-decoration: none;
+                }
+            }
+        }
+        .categories{
+            margin-top: 32px;
+        }
+        .suscription{
+            width: 100%;
+            clear: both;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            p{
+                font-size: 1em;
+                font-family: 'overpass',sans-serif;
+                font-weight: 700;
+                color: $default2;
+                margin-bottom: 8px;
+            }
+            .suscribe-box{
+                width: 100%;
+                clear: both;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                form{
+                    width: 90%;
+                    clear: both;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    border-radius: 20px;
+                    max-width: 400px;
+                    margin-bottom: 8px;
+                    input{
+                        padding: 8px 8px 8px 16px;
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1em;
+                        font-weight: 400;
+                        border-radius: 20px 0 0 20px;
+                        border:none;
+                        outline: none;
+                        &::placeholder{
+                            color: lightgray;
+                            font-size: 1em;
+                            font-weight: 400;
+    
+                        }
+                    }
+                    button{
+                        appearance: none;
+                        background-color: $color1;
+                        border-radius: 0 20px 20px 0;
+                        height: 35px;
+                        width: 20%;
+                        border: none;
+                        outline: none;
+                        
+                        &:hover{
+                            cursor: pointer;
+                        }
+
+                        i{
+                            z-index: 2;
+                            color: #fff;
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
+                        p{
+                            color: #fff;
+                            display: none;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                }
+                small{
+                    color: $default2;
+                    font-weight: 300;
+                    font-family: 'overpass',sans-serif;
+                    
+                }
+            }
+        }
+    }
+
+    .bottom-menu{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        padding: 8px 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $default2;
+        z-index: 4;
+        .img-box{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            label, a{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                &:active ~ i, &:active ~ p, &:hover ~ i, &:hover ~ p{
+                    color: $color1;
+                }
+            }
+
+            i{
+                font-size: 20px;
+                margin-bottom: 4px;
+                color: $color2-v1;
+            }
+
+            p{
+                @include small-fonts($color2-v1)
+            }
+
+        }
+
+    }
+}
+
+@media screen and (min-width: 475px){
+    .container{
+        footer{
+            .statistics{
+                margin-bottom: 32px;
+                justify-content: left;
+                flex-direction: row;
+                margin-bottom: unset;
+                p{
+                    margin-right: 8px;
+                }
+            }
+            .suscription{
+                margin-top: 32px;
+            }
+        } 
+
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container{
+
+        nav {
+
+            .logo{
+
+                img:first-of-type{
+                    display: none;
+                }
+                img:nth-of-type(2){
+                    display: block;
+                }
+            } 
+        }
+        header .header-img{
+            font-size: 1.4em;
+            .search-bar{
+                max-width: 500px;
+                input{
+                    border-radius: 40px 0 0 40px;
+                    font-size: 1em;
+                    padding: 8px 0 8px 24px;
+                }
+                button{
+                    border-radius: 0 40px 40px 0;
+                }
+            }
+        }
+        main{
+            .discover{
+                .title-discover{
+                    font-size: 1.4em;
+                }
+                .cards{
+                        
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 220px));
+                    gap: 16px;                   
+                }
+            }
+            .title-categories, .title-best-sellers{
+                    font-size: 1.4em;
+                    .filter select{
+                        font-size: 1em;
+                    }
+            }
+            .start-searching{
+                font-size: 1.2em;
+            }
+            .categories, .best-sellers{
+                .cards{
+
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 320px));
+                    gap: 32px;       
+                    
+                }
+            }
+            .why.container h1{
+                font-size: 1.4em;
+                margin-right: 32px;
+            }    
+
+        } 
+        footer{
+            grid-template-columns: repeat(2, 1fr);
+            padding: 16px 32px;
+                .box-right{
+                    margin: 16px 0 0 16px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    .categories, .for-members{
+                        margin: unset;
+                        
+                    }
+                }
+                .img-box p{
+                    font-size: 1.2em;
+                }
+    
+            .suscription{ 
+                align-items: center;
+                grid-column: 1/3;
+                .suscribe-box{
+                    grid-column: 1/3;
+                    align-items: center;
+                    form{
+                        input{
+                            padding-left: 32px;
+                        }
+                        button{
+                            position: relative;
+                            margin-left: -3px;
+                            right: -3px;
+                        }
+                    } 
+                }
+            }
+
+        }
+        .bottom-menu{
+            padding: 8px 32px;
+        }
+    } 
+}
+
+@media screen and (min-width: 1024px){
+
+   
+    #myEgeria-tab:checked ~ .container .my-egeria{
+        display: block;
+        opacity: 1;
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-delay: 0.01s;
+        transition-timing-function: ease-in;
+        transform: translateX(0%);
+    }
+    
+
+    .container{
+        nav {
+            justify-content: space-between;
+            padding: 16px 32px;
+            .icons-box{
+                width: 500px;
+                justify-content: space-between;
+                .img-box:nth-of-type(2), 
+                .img-box:nth-of-type(3), 
+                .img-box:nth-of-type(4), 
+                .img-box:nth-of-type(5), 
+                .img-box:nth-of-type(6){
+                    display: block;
+                }
+            }
+        }
+        main{
+            padding: 0 32px;
+            .discover.sh-container{
+                .cards{
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 250px));
+                    gap: 32px;   
+                }
+            }
+
+            .categories, .best-sellers{
+                .cards{
+
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 400px));
+                    gap: 32px;                   
+                    
+                }
+            }
+
+            .why.container{
+                left: -32px;
+                h1{
+                    margin-right: unset;
+                }
+                .reasons{
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+                    gap: 32px;
+                    .reason .number p{
+                        font-size: 1em;
+                    }
+                }
+            } 
+        } 
+
+        .my-egeria{
+            width: 400px;
+            clear: both;
+            max-height: 250px;
+            position: fixed;
+            top: 60px;
+            right: 16px;
+            clip-path: polygon(90% 1%, 92% 5%, 100% 5%, 100% 100%, 0 100%, 0% 11%, 0 5%, 88% 5%);
+            background-color: $color2-v1;
+            z-index: 4;
+            color: black;
+            padding: 25px;
+            padding: 32px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateX(200%);
+            display: none;
+            .dropdown-menu{
+                width: 100%;
+                clear: both;
+                color: #fff;
+                .text{
+                    width: 100%;
+                    clear: both;
+                    margin-bottom: 32px;
+                    p{
+                        font-weight: 400;
+                        label{
+                            &:hover{
+                                color: $color1;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .img-box{
+                width: 100%;
+                clear: both;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 16px;
+                position: relative;
+                i{
+                    font-size: 25px;
+                    margin-right: 8px;
+                }
+                label{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:hover ~ i, &:hover ~ p, &:active ~ i, &:active ~ p{
+                        color: $color1;
+                    }
+                }
+    
+            }
+        }
+
+        footer{
+            padding: 32px 128px;
+            bottom: 0;
+        }
+        .bottom-menu{
+            display: none;
+        }
+
+    } 
+    
+}
+
+@media screen and (min-width: 1240px){
+    .container{
+
+        main{
+            .discover{
+
+                &.sh-container{
+                        padding: 64px 0;
+                        width: calc(100% - 64px);
+                        .title-discover p{
+                        font-size: 1.6em;
+                    }
+                    small{
+                        font-size: 1.2em;
+                    }
+                    .title-categories, .title-best-sellers{
+                        h1{
+                            
+                            font-size: 1.6em;
+                        }
+                        .filter select{
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+                .start-searching{
+                    a{
+                        font-size: 1.4em;
+                    }
+                }
+    
+            }
+
+
+            .best-sellers, .categories{
+                .title-best-sellers, .title-categories{
+                    padding: 0 32px 16px 32px;
+                }
+                .cards{
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 250px));
+                    gap: 32px;
+                } 
+            }
+            .why.container{
+                h1{
+                    font-size: 1.6em;
+                }
+                .reasons{
+                    grid-template-columns:repeat(auto-fit, minmax(220px, 250px));
+                }
+            } 
+        }
+        footer .suscription p{
+            font-size: 1.2em;
+        }
+    } 
+}
+
+#btn-bullet-uno:checked ~ .discover.sh-container .cards{
+    &:nth-of-type(1){
+        display: block;
+    }
+    &:nth-of-type(2), 
+    &:nth-of-type(3){
+        display: none;
+    }
+    //darle funcionalidad con javascript, solo muestra el primer bloque de 3 tarjetas
+}
+
+#btn-bullet-uno:checked ~ .discover.sh-container .bullets .bullet:nth-of-type(1),
+#btn-bullet-dos:checked ~ .discover.sh-container .bullets .bullet:nth-of-type(2),
+#btn-bullet-tres:checked ~ .discover.sh-container .bullets .bullet:nth-of-type(3)
+{
+    background-color: $color1;
+}
+
+
+#home-tab:not(:checked) ~ .container header,
+#home-tab:not(:checked) ~ .container main,
+#myEgeria-tab:not(:checked) ~ .container .my-egeria,
+#orders-tab:not(:checked) ~ .container main .orders-section,
+#cart-tab:not(:checked) ~ .container main .cart-section,
+#sign-up-tab:not(:checked) ~ .container .sign-up-form,
+#log-in-tab:not(:checked) ~ .container .log-in-form
+{
+    display: none;
+}
+
+
+#home-tab ~ .container header,
+#home-tab ~ .container main,
+#orders-tab:checked ~ .container main .orders-section,
+#cart-tab:checked ~ .container main .cart-section,
+#sign-up-tab:checked ~ .container .sign-up-form,
+#log-in-tab:checked ~ .container .log-in-form
+{
+    display: block;
+
+}
+
+
+//fondo naranja en los íconos del .bottom-menu
+#home-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(1) i,
+#home-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(1) p{
+    color: $color1;
+}
+#sign-up-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(2) i,
+#sign-up-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(2) p{
+    color: $color1;
+}
+#log-in-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) i,
+#log-in-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) p{
+    color: $color1;
+}
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) i,
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) p{
+    color: $color1;
+}
+#myEgeria-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) i,
+#myEgeria-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) p{
+    color: $color1;
+}
+//fondo naranja en los íconos del .bottom-menu
+
+
+//fondo naranja en los íconos del nav
+
+#home-tab:checked ~ .container nav .img-box:nth-of-type(2) i,
+#home-tab:checked ~ .container nav .img-box:nth-of-type(2) p{
+    color: $color1;
+}
+
+#sign-up-tab:checked ~ .container nav .img-box:nth-of-type(3) i,
+#sign-up-tab:checked ~ .container nav .img-box:nth-of-type(3) p{
+    color: $color1;
+}
+#log-in-tab:checked ~ .container nav .img-box:nth-of-type(4) i,
+#log-in-tab:checked ~ .container nav .img-box:nth-of-type(4) p{
+    color: $color1;
+}
+
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) i,
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) p{
+    color: $color1;
+}
+
+#myEgeria-tab:checked ~ .container nav .img-box:nth-of-type(6) i,
+#myEgeria-tab:checked ~ .container nav .img-box:nth-of-type(6) p{
+    color: $color1;
+}
+
+//fondo naranja en los íconos del nav

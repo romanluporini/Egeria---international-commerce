@@ -1,0 +1,511 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.container {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(89, 96, 203, 0.32)), color-stop(50%, #fff));
+  background: linear-gradient(to bottom, rgba(89, 96, 203, 0.32) 50%, #fff 50%);
+  padding: 100px 16px;
+}
+
+.container .sign-up-form, .container .log-in-form {
+  clear: both;
+  padding: 32px 16px;
+  background: #fff;
+  -webkit-box-shadow: 7px 7px 100px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 7px 100px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .sign-up-form .title, .container .log-in-form .title {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .sign-up-form .title img, .container .log-in-form .title img {
+  width: 60%;
+  max-width: 150px;
+  display: none;
+}
+
+.container .sign-up-form .title img:nth-of-type(2), .container .log-in-form .title img:nth-of-type(2) {
+  display: block;
+}
+
+.container .sign-up-form .language, .container .log-in-form .language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 32px;
+}
+
+.container .sign-up-form .language select, .container .log-in-form .language select {
+  clear: both;
+  font-size: 1em;
+  font-weight: 400;
+  color: #000;
+  padding: 4px 16px;
+  margin-right: 16px;
+}
+
+.container .sign-up-form h1, .container .log-in-form h1 {
+  font-family: 'overpass', sans-serif;
+  font-size: 1.5em;
+  color: #000;
+  font-weight: 700;
+}
+
+.container .sign-up-form form, .container .log-in-form form {
+  width: 100%;
+  max-width: 450px;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  row-gap: 16px;
+}
+
+.container .sign-up-form form label, .container .log-in-form form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1em;
+  font-weight: 400;
+  color: #000;
+  padding: 4px 0;
+}
+
+.container .sign-up-form form label span, .container .log-in-form form label span {
+  color: red;
+}
+
+.container .sign-up-form form .name, .container .sign-up-form form .tel, .container .log-in-form form .name, .container .log-in-form form .tel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 20px;
+}
+
+.container .sign-up-form form .inputs, .container .log-in-form form .inputs {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .sign-up-form form .inputs .inputs-box, .container .log-in-form form .inputs .inputs-box {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 16px;
+  position: relative;
+}
+
+.container .sign-up-form form .inputs i, .container .log-in-form form .inputs i {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  font-size: 29px;
+}
+
+.container .sign-up-form form .inputs input[type="radio"], .container .log-in-form form .inputs input[type="radio"] {
+  display: block;
+  margin-left: 2px;
+  margin-right: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #717171;
+}
+
+.container .sign-up-form form .inputs input[type="radio"]:hover, .container .log-in-form form .inputs input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+.container .sign-up-form form .inputs input[type="radio"]:checked, .container .log-in-form form .inputs input[type="radio"]:checked {
+  border-color: #5960cb;
+}
+
+.container .sign-up-form form .inputs input[type="radio"]:checked ~ i, .container .log-in-form form .inputs input[type="radio"]:checked ~ i {
+  display: block;
+  color: #5960cb;
+}
+
+.container .sign-up-form form .text, .container .log-in-form form .text {
+  width: 100%;
+  clear: both;
+}
+
+.container .sign-up-form form .text p, .container .log-in-form form .text p {
+  text-indent: 33px;
+  text-align: justify;
+  color: #000;
+  font-size: 1em;
+  -webkit-column-rule-width: 200px;
+          column-rule-width: 200px;
+}
+
+.container .sign-up-form form .input-box, .container .log-in-form form .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  font-size: 1em;
+  margin-top: 6px;
+  position: relative;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+
+.container .sign-up-form form .input-box i, .container .log-in-form form .input-box i {
+  display: none;
+  pointer-events: none;
+}
+
+.container .sign-up-form form .input-box input[type="checkbox"], .container .log-in-form form .input-box input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #717171;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  top: 25px;
+}
+
+.container .sign-up-form form .input-box input[type="checkbox"]:hover, .container .log-in-form form .input-box input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.container .sign-up-form form .input-box input[type="checkbox"]:checked, .container .log-in-form form .input-box input[type="checkbox"]:checked {
+  border-color: #5960cb;
+}
+
+.container .sign-up-form form .input-box input[type="checkbox"]:checked ~ i, .container .log-in-form form .input-box input[type="checkbox"]:checked ~ i {
+  display: block;
+  color: #5960cb;
+  font-size: 27px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+.container .sign-up-form form .agree-button, .container .log-in-form form .agree-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 50px;
+}
+
+.container .sign-up-form form .agree-button button, .container .log-in-form form .agree-button button {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fe6047;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 40px;
+  padding: 8px 32px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+}
+
+.container .sign-up-form form .agree-button button:hover, .container .log-in-form form .agree-button button:hover {
+  cursor: pointer;
+}
+
+.container .sign-up-form form .agree-button button:active, .container .log-in-form form .agree-button button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.container .sign-up-form form input, .container .sign-up-form form select, .container .log-in-form form input, .container .log-in-form form select {
+  border-radius: 20px;
+  border: 1px solid #717171;
+  outline: none;
+  padding: 8px 8px 8px 16px;
+  font-size: 1em;
+}
+
+.container .sign-up-form form input::-webkit-input-placeholder, .container .sign-up-form form select::-webkit-input-placeholder, .container .log-in-form form input::-webkit-input-placeholder, .container .log-in-form form select::-webkit-input-placeholder {
+  font-size: 0.8em;
+}
+
+.container .sign-up-form form input:-ms-input-placeholder, .container .sign-up-form form select:-ms-input-placeholder, .container .log-in-form form input:-ms-input-placeholder, .container .log-in-form form select:-ms-input-placeholder {
+  font-size: 0.8em;
+}
+
+.container .sign-up-form form input::-ms-input-placeholder, .container .sign-up-form form select::-ms-input-placeholder, .container .log-in-form form input::-ms-input-placeholder, .container .log-in-form form select::-ms-input-placeholder {
+  font-size: 0.8em;
+}
+
+.container .sign-up-form form input::placeholder, .container .sign-up-form form select::placeholder, .container .log-in-form form input::placeholder, .container .log-in-form form select::placeholder {
+  font-size: 0.8em;
+}
+
+.container .sign-up-form form select, .container .log-in-form form select {
+  background: none;
+}
+
+.container .sign-up-form form select:hover, .container .log-in-form form select:hover {
+  cursor: pointer;
+}
+
+.container .sign-up-form form input[type="number"], .container .log-in-form form input[type="number"] {
+  width: 100%;
+  margin-right: 8px;
+}
+
+.container .sign-up-form form input[type="number"]:nth-of-type(2), .container .sign-up-form form input[type="number"]:nth-of-type(3), .container .log-in-form form input[type="number"]:nth-of-type(2), .container .log-in-form form input[type="number"]:nth-of-type(3) {
+  margin-left: 8px;
+}
+
+.container .sign-up-form form input[type="number"]::-webkit-inner-spin-button, .container .log-in-form form input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.container .sign-up-form form input[type="text"], .container .log-in-form form input[type="text"] {
+  width: 100%;
+  margin-right: 8px;
+}
+
+.container .log-in-form form .password-forgot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .log-in-form form .input-box {
+  height: 1.6em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+.container .log-in-form form .input-box p {
+  font-size: 0.8em;
+}
+
+.container .log-in-form form .input-box input[type="checkbox"] {
+  position: relative;
+  top: 0;
+  margin-right: 8px;
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.container .log-in-form form .input-box input[type="checkbox"]:checked ~ i {
+  top: 0;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 475px) {
+  .container .sign-up-form form .text p {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container .log-in-form {
+    margin: 0 calc((100% - 768px) / 2);
+  }
+  .container .log-in-form form {
+    font-size: 1.2em;
+  }
+  .container .log-in-form form .input-box input[type="checkbox"]:checked ~ i {
+    font-size: 31px;
+  }
+  .container .log-in-form form .title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .log-in-form form .title img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
+  .container .log-in-form form .language {
+    margin: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .log-in-form form .language h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container .sign-up-form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .container .sign-up-form form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 768px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 450px;
+        grid-template-columns: 25% 450px;
+    gap: 32px;
+    font-size: 1.2em;
+  }
+  .container .sign-up-form form .title img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .container .sign-up-form form .language {
+    margin: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container .sign-up-form form .language h1 {
+    font-size: 2em;
+  }
+  .container .sign-up-form form label {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .sign-up-form form input {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container .sign-up-form form .text {
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+  }
+  .container .sign-up-form form .agree-button {
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+  }
+}
+/*# sourceMappingURL=user-signup.css.map */
