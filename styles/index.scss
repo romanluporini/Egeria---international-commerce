@@ -534,6 +534,7 @@ input[type="checkbox"]
     }
 
 
+
     footer{
         margin-top: 64px;
         padding: 16px;
@@ -1115,7 +1116,7 @@ input[type="checkbox"]
 #home-tab:not(:checked) ~ .container main,
 #myEgeria-tab:not(:checked) ~ .container .my-egeria,
 #orders-tab:not(:checked) ~ .container main .orders-section,
-#cart-tab:not(:checked) ~ .container main .cart-section,
+#cart-tab:not(:checked) ~ .container .cart-section,
 #sign-up-tab:not(:checked) ~ .container .sign-up-form,
 #log-in-tab:not(:checked) ~ .container .log-in-form
 {
@@ -1126,13 +1127,17 @@ input[type="checkbox"]
 #home-tab ~ .container header,
 #home-tab ~ .container main,
 #orders-tab:checked ~ .container main .orders-section,
-#cart-tab:checked ~ .container main .cart-section,
+#cart-tab:checked ~ .container .cart-section,
 #sign-up-tab:checked ~ .container .sign-up-form,
 #log-in-tab:checked ~ .container .log-in-form
 {
     display: block;
-
 }
+
+#cart-tab:checked ~ .container footer{
+    display: none;
+}
+
 
 
 //fondo naranja en los íconos del .bottom-menu
@@ -1148,8 +1153,8 @@ input[type="checkbox"]
 #log-in-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) p{
     color: $color1;
 }
-#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) i,
-#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(3) p{
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(4) i,
+#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(4) p{
     color: $color1;
 }
 #myEgeria-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) i,
@@ -1175,8 +1180,8 @@ input[type="checkbox"]
     color: $color1;
 }
 
-#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) i,
-#cart-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(5) p{
+#cart-tab:checked ~ .container nav .img-box:nth-of-type(5) i,
+#cart-tab:checked ~ .container nav .img-box:nth-of-type(5) p{
     color: $color1;
 }
 

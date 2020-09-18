@@ -333,7 +333,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  clear: both;
+  height: calc(100vh - 150px);
+  overflow-y: scroll;
   position: relative;
   top: 75px;
   left: 0;
@@ -344,6 +345,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container .main-customers::-webkit-scrollbar, .container .main-suppliers::-webkit-scrollbar {
+  display: none;
 }
 
 .container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
@@ -1927,14 +1932,14 @@ body {
   min-height: 50vh;
 }
 
-.container .main-customers .myEgeria-section, .container .main-customers .notifications-section, .container .main-suppliers .myEgeria-section, .container .main-suppliers .notifications-section {
+.container .main-customers .myEgeria-section, .container .main-customers .notifications-section, .container .main-customers .cart-section, .container .main-suppliers .myEgeria-section, .container .main-suppliers .notifications-section, .container .main-suppliers .cart-section {
   padding: 16px;
   background-color: rgba(117, 123, 208, 0.2);
   font-family: 'overpass',sans-serif;
   min-height: 100vh;
 }
 
-.container .main-customers .myEgeria-section .title, .container .main-customers .myEgeria-section .panel, .container .main-customers .notifications-section .title, .container .main-customers .notifications-section .panel, .container .main-suppliers .myEgeria-section .title, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .notifications-section .title, .container .main-suppliers .notifications-section .panel {
+.container .main-customers .myEgeria-section .title, .container .main-customers .myEgeria-section .panel, .container .main-customers .myEgeria-section .items, .container .main-customers .myEgeria-section .summary, .container .main-customers .notifications-section .title, .container .main-customers .notifications-section .panel, .container .main-customers .notifications-section .items, .container .main-customers .notifications-section .summary, .container .main-customers .cart-section .title, .container .main-customers .cart-section .panel, .container .main-customers .cart-section .items, .container .main-customers .cart-section .summary, .container .main-suppliers .myEgeria-section .title, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .myEgeria-section .items, .container .main-suppliers .myEgeria-section .summary, .container .main-suppliers .notifications-section .title, .container .main-suppliers .notifications-section .panel, .container .main-suppliers .notifications-section .items, .container .main-suppliers .notifications-section .summary, .container .main-suppliers .cart-section .title, .container .main-suppliers .cart-section .panel, .container .main-suppliers .cart-section .items, .container .main-suppliers .cart-section .summary {
   background-color: #fff;
   border-radius: 10px;
   padding: 16px;
@@ -1943,31 +1948,31 @@ body {
   margin-bottom: 16px;
 }
 
-.container .main-customers .myEgeria-section .title h1, .container .main-customers .myEgeria-section .title h2, .container .main-customers .myEgeria-section .title p, .container .main-customers .myEgeria-section .panel h1, .container .main-customers .myEgeria-section .panel h2, .container .main-customers .myEgeria-section .panel p, .container .main-customers .notifications-section .title h1, .container .main-customers .notifications-section .title h2, .container .main-customers .notifications-section .title p, .container .main-customers .notifications-section .panel h1, .container .main-customers .notifications-section .panel h2, .container .main-customers .notifications-section .panel p, .container .main-suppliers .myEgeria-section .title h1, .container .main-suppliers .myEgeria-section .title h2, .container .main-suppliers .myEgeria-section .title p, .container .main-suppliers .myEgeria-section .panel h1, .container .main-suppliers .myEgeria-section .panel h2, .container .main-suppliers .myEgeria-section .panel p, .container .main-suppliers .notifications-section .title h1, .container .main-suppliers .notifications-section .title h2, .container .main-suppliers .notifications-section .title p, .container .main-suppliers .notifications-section .panel h1, .container .main-suppliers .notifications-section .panel h2, .container .main-suppliers .notifications-section .panel p {
+.container .main-customers .myEgeria-section .title h1, .container .main-customers .myEgeria-section .title h2, .container .main-customers .myEgeria-section .title p, .container .main-customers .myEgeria-section .panel h1, .container .main-customers .myEgeria-section .panel h2, .container .main-customers .myEgeria-section .panel p, .container .main-customers .myEgeria-section .items h1, .container .main-customers .myEgeria-section .items h2, .container .main-customers .myEgeria-section .items p, .container .main-customers .myEgeria-section .summary h1, .container .main-customers .myEgeria-section .summary h2, .container .main-customers .myEgeria-section .summary p, .container .main-customers .notifications-section .title h1, .container .main-customers .notifications-section .title h2, .container .main-customers .notifications-section .title p, .container .main-customers .notifications-section .panel h1, .container .main-customers .notifications-section .panel h2, .container .main-customers .notifications-section .panel p, .container .main-customers .notifications-section .items h1, .container .main-customers .notifications-section .items h2, .container .main-customers .notifications-section .items p, .container .main-customers .notifications-section .summary h1, .container .main-customers .notifications-section .summary h2, .container .main-customers .notifications-section .summary p, .container .main-customers .cart-section .title h1, .container .main-customers .cart-section .title h2, .container .main-customers .cart-section .title p, .container .main-customers .cart-section .panel h1, .container .main-customers .cart-section .panel h2, .container .main-customers .cart-section .panel p, .container .main-customers .cart-section .items h1, .container .main-customers .cart-section .items h2, .container .main-customers .cart-section .items p, .container .main-customers .cart-section .summary h1, .container .main-customers .cart-section .summary h2, .container .main-customers .cart-section .summary p, .container .main-suppliers .myEgeria-section .title h1, .container .main-suppliers .myEgeria-section .title h2, .container .main-suppliers .myEgeria-section .title p, .container .main-suppliers .myEgeria-section .panel h1, .container .main-suppliers .myEgeria-section .panel h2, .container .main-suppliers .myEgeria-section .panel p, .container .main-suppliers .myEgeria-section .items h1, .container .main-suppliers .myEgeria-section .items h2, .container .main-suppliers .myEgeria-section .items p, .container .main-suppliers .myEgeria-section .summary h1, .container .main-suppliers .myEgeria-section .summary h2, .container .main-suppliers .myEgeria-section .summary p, .container .main-suppliers .notifications-section .title h1, .container .main-suppliers .notifications-section .title h2, .container .main-suppliers .notifications-section .title p, .container .main-suppliers .notifications-section .panel h1, .container .main-suppliers .notifications-section .panel h2, .container .main-suppliers .notifications-section .panel p, .container .main-suppliers .notifications-section .items h1, .container .main-suppliers .notifications-section .items h2, .container .main-suppliers .notifications-section .items p, .container .main-suppliers .notifications-section .summary h1, .container .main-suppliers .notifications-section .summary h2, .container .main-suppliers .notifications-section .summary p, .container .main-suppliers .cart-section .title h1, .container .main-suppliers .cart-section .title h2, .container .main-suppliers .cart-section .title p, .container .main-suppliers .cart-section .panel h1, .container .main-suppliers .cart-section .panel h2, .container .main-suppliers .cart-section .panel p, .container .main-suppliers .cart-section .items h1, .container .main-suppliers .cart-section .items h2, .container .main-suppliers .cart-section .items p, .container .main-suppliers .cart-section .summary h1, .container .main-suppliers .cart-section .summary h2, .container .main-suppliers .cart-section .summary p {
   font-size: 1.2em;
   color: #000;
   text-align: left;
   text-transform: capitalize;
 }
 
-.container .main-customers .myEgeria-section .title h1 h2, .container .main-customers .myEgeria-section .title h2 h2, .container .main-customers .myEgeria-section .title p h2, .container .main-customers .myEgeria-section .panel h1 h2, .container .main-customers .myEgeria-section .panel h2 h2, .container .main-customers .myEgeria-section .panel p h2, .container .main-customers .notifications-section .title h1 h2, .container .main-customers .notifications-section .title h2 h2, .container .main-customers .notifications-section .title p h2, .container .main-customers .notifications-section .panel h1 h2, .container .main-customers .notifications-section .panel h2 h2, .container .main-customers .notifications-section .panel p h2, .container .main-suppliers .myEgeria-section .title h1 h2, .container .main-suppliers .myEgeria-section .title h2 h2, .container .main-suppliers .myEgeria-section .title p h2, .container .main-suppliers .myEgeria-section .panel h1 h2, .container .main-suppliers .myEgeria-section .panel h2 h2, .container .main-suppliers .myEgeria-section .panel p h2, .container .main-suppliers .notifications-section .title h1 h2, .container .main-suppliers .notifications-section .title h2 h2, .container .main-suppliers .notifications-section .title p h2, .container .main-suppliers .notifications-section .panel h1 h2, .container .main-suppliers .notifications-section .panel h2 h2, .container .main-suppliers .notifications-section .panel p h2 {
+.container .main-customers .myEgeria-section .title h1 h2, .container .main-customers .myEgeria-section .title h2 h2, .container .main-customers .myEgeria-section .title p h2, .container .main-customers .myEgeria-section .panel h1 h2, .container .main-customers .myEgeria-section .panel h2 h2, .container .main-customers .myEgeria-section .panel p h2, .container .main-customers .myEgeria-section .items h1 h2, .container .main-customers .myEgeria-section .items h2 h2, .container .main-customers .myEgeria-section .items p h2, .container .main-customers .myEgeria-section .summary h1 h2, .container .main-customers .myEgeria-section .summary h2 h2, .container .main-customers .myEgeria-section .summary p h2, .container .main-customers .notifications-section .title h1 h2, .container .main-customers .notifications-section .title h2 h2, .container .main-customers .notifications-section .title p h2, .container .main-customers .notifications-section .panel h1 h2, .container .main-customers .notifications-section .panel h2 h2, .container .main-customers .notifications-section .panel p h2, .container .main-customers .notifications-section .items h1 h2, .container .main-customers .notifications-section .items h2 h2, .container .main-customers .notifications-section .items p h2, .container .main-customers .notifications-section .summary h1 h2, .container .main-customers .notifications-section .summary h2 h2, .container .main-customers .notifications-section .summary p h2, .container .main-customers .cart-section .title h1 h2, .container .main-customers .cart-section .title h2 h2, .container .main-customers .cart-section .title p h2, .container .main-customers .cart-section .panel h1 h2, .container .main-customers .cart-section .panel h2 h2, .container .main-customers .cart-section .panel p h2, .container .main-customers .cart-section .items h1 h2, .container .main-customers .cart-section .items h2 h2, .container .main-customers .cart-section .items p h2, .container .main-customers .cart-section .summary h1 h2, .container .main-customers .cart-section .summary h2 h2, .container .main-customers .cart-section .summary p h2, .container .main-suppliers .myEgeria-section .title h1 h2, .container .main-suppliers .myEgeria-section .title h2 h2, .container .main-suppliers .myEgeria-section .title p h2, .container .main-suppliers .myEgeria-section .panel h1 h2, .container .main-suppliers .myEgeria-section .panel h2 h2, .container .main-suppliers .myEgeria-section .panel p h2, .container .main-suppliers .myEgeria-section .items h1 h2, .container .main-suppliers .myEgeria-section .items h2 h2, .container .main-suppliers .myEgeria-section .items p h2, .container .main-suppliers .myEgeria-section .summary h1 h2, .container .main-suppliers .myEgeria-section .summary h2 h2, .container .main-suppliers .myEgeria-section .summary p h2, .container .main-suppliers .notifications-section .title h1 h2, .container .main-suppliers .notifications-section .title h2 h2, .container .main-suppliers .notifications-section .title p h2, .container .main-suppliers .notifications-section .panel h1 h2, .container .main-suppliers .notifications-section .panel h2 h2, .container .main-suppliers .notifications-section .panel p h2, .container .main-suppliers .notifications-section .items h1 h2, .container .main-suppliers .notifications-section .items h2 h2, .container .main-suppliers .notifications-section .items p h2, .container .main-suppliers .notifications-section .summary h1 h2, .container .main-suppliers .notifications-section .summary h2 h2, .container .main-suppliers .notifications-section .summary p h2, .container .main-suppliers .cart-section .title h1 h2, .container .main-suppliers .cart-section .title h2 h2, .container .main-suppliers .cart-section .title p h2, .container .main-suppliers .cart-section .panel h1 h2, .container .main-suppliers .cart-section .panel h2 h2, .container .main-suppliers .cart-section .panel p h2, .container .main-suppliers .cart-section .items h1 h2, .container .main-suppliers .cart-section .items h2 h2, .container .main-suppliers .cart-section .items p h2, .container .main-suppliers .cart-section .summary h1 h2, .container .main-suppliers .cart-section .summary h2 h2, .container .main-suppliers .cart-section .summary p h2 {
   font-size: 1em;
 }
 
-.container .main-customers .myEgeria-section .title h1 p, .container .main-customers .myEgeria-section .title h2 p, .container .main-customers .myEgeria-section .title p p, .container .main-customers .myEgeria-section .panel h1 p, .container .main-customers .myEgeria-section .panel h2 p, .container .main-customers .myEgeria-section .panel p p, .container .main-customers .notifications-section .title h1 p, .container .main-customers .notifications-section .title h2 p, .container .main-customers .notifications-section .title p p, .container .main-customers .notifications-section .panel h1 p, .container .main-customers .notifications-section .panel h2 p, .container .main-customers .notifications-section .panel p p, .container .main-suppliers .myEgeria-section .title h1 p, .container .main-suppliers .myEgeria-section .title h2 p, .container .main-suppliers .myEgeria-section .title p p, .container .main-suppliers .myEgeria-section .panel h1 p, .container .main-suppliers .myEgeria-section .panel h2 p, .container .main-suppliers .myEgeria-section .panel p p, .container .main-suppliers .notifications-section .title h1 p, .container .main-suppliers .notifications-section .title h2 p, .container .main-suppliers .notifications-section .title p p, .container .main-suppliers .notifications-section .panel h1 p, .container .main-suppliers .notifications-section .panel h2 p, .container .main-suppliers .notifications-section .panel p p {
+.container .main-customers .myEgeria-section .title h1 p, .container .main-customers .myEgeria-section .title h2 p, .container .main-customers .myEgeria-section .title p p, .container .main-customers .myEgeria-section .panel h1 p, .container .main-customers .myEgeria-section .panel h2 p, .container .main-customers .myEgeria-section .panel p p, .container .main-customers .myEgeria-section .items h1 p, .container .main-customers .myEgeria-section .items h2 p, .container .main-customers .myEgeria-section .items p p, .container .main-customers .myEgeria-section .summary h1 p, .container .main-customers .myEgeria-section .summary h2 p, .container .main-customers .myEgeria-section .summary p p, .container .main-customers .notifications-section .title h1 p, .container .main-customers .notifications-section .title h2 p, .container .main-customers .notifications-section .title p p, .container .main-customers .notifications-section .panel h1 p, .container .main-customers .notifications-section .panel h2 p, .container .main-customers .notifications-section .panel p p, .container .main-customers .notifications-section .items h1 p, .container .main-customers .notifications-section .items h2 p, .container .main-customers .notifications-section .items p p, .container .main-customers .notifications-section .summary h1 p, .container .main-customers .notifications-section .summary h2 p, .container .main-customers .notifications-section .summary p p, .container .main-customers .cart-section .title h1 p, .container .main-customers .cart-section .title h2 p, .container .main-customers .cart-section .title p p, .container .main-customers .cart-section .panel h1 p, .container .main-customers .cart-section .panel h2 p, .container .main-customers .cart-section .panel p p, .container .main-customers .cart-section .items h1 p, .container .main-customers .cart-section .items h2 p, .container .main-customers .cart-section .items p p, .container .main-customers .cart-section .summary h1 p, .container .main-customers .cart-section .summary h2 p, .container .main-customers .cart-section .summary p p, .container .main-suppliers .myEgeria-section .title h1 p, .container .main-suppliers .myEgeria-section .title h2 p, .container .main-suppliers .myEgeria-section .title p p, .container .main-suppliers .myEgeria-section .panel h1 p, .container .main-suppliers .myEgeria-section .panel h2 p, .container .main-suppliers .myEgeria-section .panel p p, .container .main-suppliers .myEgeria-section .items h1 p, .container .main-suppliers .myEgeria-section .items h2 p, .container .main-suppliers .myEgeria-section .items p p, .container .main-suppliers .myEgeria-section .summary h1 p, .container .main-suppliers .myEgeria-section .summary h2 p, .container .main-suppliers .myEgeria-section .summary p p, .container .main-suppliers .notifications-section .title h1 p, .container .main-suppliers .notifications-section .title h2 p, .container .main-suppliers .notifications-section .title p p, .container .main-suppliers .notifications-section .panel h1 p, .container .main-suppliers .notifications-section .panel h2 p, .container .main-suppliers .notifications-section .panel p p, .container .main-suppliers .notifications-section .items h1 p, .container .main-suppliers .notifications-section .items h2 p, .container .main-suppliers .notifications-section .items p p, .container .main-suppliers .notifications-section .summary h1 p, .container .main-suppliers .notifications-section .summary h2 p, .container .main-suppliers .notifications-section .summary p p, .container .main-suppliers .cart-section .title h1 p, .container .main-suppliers .cart-section .title h2 p, .container .main-suppliers .cart-section .title p p, .container .main-suppliers .cart-section .panel h1 p, .container .main-suppliers .cart-section .panel h2 p, .container .main-suppliers .cart-section .panel p p, .container .main-suppliers .cart-section .items h1 p, .container .main-suppliers .cart-section .items h2 p, .container .main-suppliers .cart-section .items p p, .container .main-suppliers .cart-section .summary h1 p, .container .main-suppliers .cart-section .summary h2 p, .container .main-suppliers .cart-section .summary p p {
   font-size: 0.8em;
 }
 
-.container .main-customers .myEgeria-section .title h1 p a, .container .main-customers .myEgeria-section .title h2 p a, .container .main-customers .myEgeria-section .title p p a, .container .main-customers .myEgeria-section .panel h1 p a, .container .main-customers .myEgeria-section .panel h2 p a, .container .main-customers .myEgeria-section .panel p p a, .container .main-customers .notifications-section .title h1 p a, .container .main-customers .notifications-section .title h2 p a, .container .main-customers .notifications-section .title p p a, .container .main-customers .notifications-section .panel h1 p a, .container .main-customers .notifications-section .panel h2 p a, .container .main-customers .notifications-section .panel p p a, .container .main-suppliers .myEgeria-section .title h1 p a, .container .main-suppliers .myEgeria-section .title h2 p a, .container .main-suppliers .myEgeria-section .title p p a, .container .main-suppliers .myEgeria-section .panel h1 p a, .container .main-suppliers .myEgeria-section .panel h2 p a, .container .main-suppliers .myEgeria-section .panel p p a, .container .main-suppliers .notifications-section .title h1 p a, .container .main-suppliers .notifications-section .title h2 p a, .container .main-suppliers .notifications-section .title p p a, .container .main-suppliers .notifications-section .panel h1 p a, .container .main-suppliers .notifications-section .panel h2 p a, .container .main-suppliers .notifications-section .panel p p a {
+.container .main-customers .myEgeria-section .title h1 p a, .container .main-customers .myEgeria-section .title h2 p a, .container .main-customers .myEgeria-section .title p p a, .container .main-customers .myEgeria-section .panel h1 p a, .container .main-customers .myEgeria-section .panel h2 p a, .container .main-customers .myEgeria-section .panel p p a, .container .main-customers .myEgeria-section .items h1 p a, .container .main-customers .myEgeria-section .items h2 p a, .container .main-customers .myEgeria-section .items p p a, .container .main-customers .myEgeria-section .summary h1 p a, .container .main-customers .myEgeria-section .summary h2 p a, .container .main-customers .myEgeria-section .summary p p a, .container .main-customers .notifications-section .title h1 p a, .container .main-customers .notifications-section .title h2 p a, .container .main-customers .notifications-section .title p p a, .container .main-customers .notifications-section .panel h1 p a, .container .main-customers .notifications-section .panel h2 p a, .container .main-customers .notifications-section .panel p p a, .container .main-customers .notifications-section .items h1 p a, .container .main-customers .notifications-section .items h2 p a, .container .main-customers .notifications-section .items p p a, .container .main-customers .notifications-section .summary h1 p a, .container .main-customers .notifications-section .summary h2 p a, .container .main-customers .notifications-section .summary p p a, .container .main-customers .cart-section .title h1 p a, .container .main-customers .cart-section .title h2 p a, .container .main-customers .cart-section .title p p a, .container .main-customers .cart-section .panel h1 p a, .container .main-customers .cart-section .panel h2 p a, .container .main-customers .cart-section .panel p p a, .container .main-customers .cart-section .items h1 p a, .container .main-customers .cart-section .items h2 p a, .container .main-customers .cart-section .items p p a, .container .main-customers .cart-section .summary h1 p a, .container .main-customers .cart-section .summary h2 p a, .container .main-customers .cart-section .summary p p a, .container .main-suppliers .myEgeria-section .title h1 p a, .container .main-suppliers .myEgeria-section .title h2 p a, .container .main-suppliers .myEgeria-section .title p p a, .container .main-suppliers .myEgeria-section .panel h1 p a, .container .main-suppliers .myEgeria-section .panel h2 p a, .container .main-suppliers .myEgeria-section .panel p p a, .container .main-suppliers .myEgeria-section .items h1 p a, .container .main-suppliers .myEgeria-section .items h2 p a, .container .main-suppliers .myEgeria-section .items p p a, .container .main-suppliers .myEgeria-section .summary h1 p a, .container .main-suppliers .myEgeria-section .summary h2 p a, .container .main-suppliers .myEgeria-section .summary p p a, .container .main-suppliers .notifications-section .title h1 p a, .container .main-suppliers .notifications-section .title h2 p a, .container .main-suppliers .notifications-section .title p p a, .container .main-suppliers .notifications-section .panel h1 p a, .container .main-suppliers .notifications-section .panel h2 p a, .container .main-suppliers .notifications-section .panel p p a, .container .main-suppliers .notifications-section .items h1 p a, .container .main-suppliers .notifications-section .items h2 p a, .container .main-suppliers .notifications-section .items p p a, .container .main-suppliers .notifications-section .summary h1 p a, .container .main-suppliers .notifications-section .summary h2 p a, .container .main-suppliers .notifications-section .summary p p a, .container .main-suppliers .cart-section .title h1 p a, .container .main-suppliers .cart-section .title h2 p a, .container .main-suppliers .cart-section .title p p a, .container .main-suppliers .cart-section .panel h1 p a, .container .main-suppliers .cart-section .panel h2 p a, .container .main-suppliers .cart-section .panel p p a, .container .main-suppliers .cart-section .items h1 p a, .container .main-suppliers .cart-section .items h2 p a, .container .main-suppliers .cart-section .items p p a, .container .main-suppliers .cart-section .summary h1 p a, .container .main-suppliers .cart-section .summary h2 p a, .container .main-suppliers .cart-section .summary p p a {
   text-decoration: none;
 }
 
-.container .main-customers .myEgeria-section .title h1 p a:hover, .container .main-customers .myEgeria-section .title h2 p a:hover, .container .main-customers .myEgeria-section .title p p a:hover, .container .main-customers .myEgeria-section .panel h1 p a:hover, .container .main-customers .myEgeria-section .panel h2 p a:hover, .container .main-customers .myEgeria-section .panel p p a:hover, .container .main-customers .notifications-section .title h1 p a:hover, .container .main-customers .notifications-section .title h2 p a:hover, .container .main-customers .notifications-section .title p p a:hover, .container .main-customers .notifications-section .panel h1 p a:hover, .container .main-customers .notifications-section .panel h2 p a:hover, .container .main-customers .notifications-section .panel p p a:hover, .container .main-suppliers .myEgeria-section .title h1 p a:hover, .container .main-suppliers .myEgeria-section .title h2 p a:hover, .container .main-suppliers .myEgeria-section .title p p a:hover, .container .main-suppliers .myEgeria-section .panel h1 p a:hover, .container .main-suppliers .myEgeria-section .panel h2 p a:hover, .container .main-suppliers .myEgeria-section .panel p p a:hover, .container .main-suppliers .notifications-section .title h1 p a:hover, .container .main-suppliers .notifications-section .title h2 p a:hover, .container .main-suppliers .notifications-section .title p p a:hover, .container .main-suppliers .notifications-section .panel h1 p a:hover, .container .main-suppliers .notifications-section .panel h2 p a:hover, .container .main-suppliers .notifications-section .panel p p a:hover {
+.container .main-customers .myEgeria-section .title h1 p a:hover, .container .main-customers .myEgeria-section .title h2 p a:hover, .container .main-customers .myEgeria-section .title p p a:hover, .container .main-customers .myEgeria-section .panel h1 p a:hover, .container .main-customers .myEgeria-section .panel h2 p a:hover, .container .main-customers .myEgeria-section .panel p p a:hover, .container .main-customers .myEgeria-section .items h1 p a:hover, .container .main-customers .myEgeria-section .items h2 p a:hover, .container .main-customers .myEgeria-section .items p p a:hover, .container .main-customers .myEgeria-section .summary h1 p a:hover, .container .main-customers .myEgeria-section .summary h2 p a:hover, .container .main-customers .myEgeria-section .summary p p a:hover, .container .main-customers .notifications-section .title h1 p a:hover, .container .main-customers .notifications-section .title h2 p a:hover, .container .main-customers .notifications-section .title p p a:hover, .container .main-customers .notifications-section .panel h1 p a:hover, .container .main-customers .notifications-section .panel h2 p a:hover, .container .main-customers .notifications-section .panel p p a:hover, .container .main-customers .notifications-section .items h1 p a:hover, .container .main-customers .notifications-section .items h2 p a:hover, .container .main-customers .notifications-section .items p p a:hover, .container .main-customers .notifications-section .summary h1 p a:hover, .container .main-customers .notifications-section .summary h2 p a:hover, .container .main-customers .notifications-section .summary p p a:hover, .container .main-customers .cart-section .title h1 p a:hover, .container .main-customers .cart-section .title h2 p a:hover, .container .main-customers .cart-section .title p p a:hover, .container .main-customers .cart-section .panel h1 p a:hover, .container .main-customers .cart-section .panel h2 p a:hover, .container .main-customers .cart-section .panel p p a:hover, .container .main-customers .cart-section .items h1 p a:hover, .container .main-customers .cart-section .items h2 p a:hover, .container .main-customers .cart-section .items p p a:hover, .container .main-customers .cart-section .summary h1 p a:hover, .container .main-customers .cart-section .summary h2 p a:hover, .container .main-customers .cart-section .summary p p a:hover, .container .main-suppliers .myEgeria-section .title h1 p a:hover, .container .main-suppliers .myEgeria-section .title h2 p a:hover, .container .main-suppliers .myEgeria-section .title p p a:hover, .container .main-suppliers .myEgeria-section .panel h1 p a:hover, .container .main-suppliers .myEgeria-section .panel h2 p a:hover, .container .main-suppliers .myEgeria-section .panel p p a:hover, .container .main-suppliers .myEgeria-section .items h1 p a:hover, .container .main-suppliers .myEgeria-section .items h2 p a:hover, .container .main-suppliers .myEgeria-section .items p p a:hover, .container .main-suppliers .myEgeria-section .summary h1 p a:hover, .container .main-suppliers .myEgeria-section .summary h2 p a:hover, .container .main-suppliers .myEgeria-section .summary p p a:hover, .container .main-suppliers .notifications-section .title h1 p a:hover, .container .main-suppliers .notifications-section .title h2 p a:hover, .container .main-suppliers .notifications-section .title p p a:hover, .container .main-suppliers .notifications-section .panel h1 p a:hover, .container .main-suppliers .notifications-section .panel h2 p a:hover, .container .main-suppliers .notifications-section .panel p p a:hover, .container .main-suppliers .notifications-section .items h1 p a:hover, .container .main-suppliers .notifications-section .items h2 p a:hover, .container .main-suppliers .notifications-section .items p p a:hover, .container .main-suppliers .notifications-section .summary h1 p a:hover, .container .main-suppliers .notifications-section .summary h2 p a:hover, .container .main-suppliers .notifications-section .summary p p a:hover, .container .main-suppliers .cart-section .title h1 p a:hover, .container .main-suppliers .cart-section .title h2 p a:hover, .container .main-suppliers .cart-section .title p p a:hover, .container .main-suppliers .cart-section .panel h1 p a:hover, .container .main-suppliers .cart-section .panel h2 p a:hover, .container .main-suppliers .cart-section .panel p p a:hover, .container .main-suppliers .cart-section .items h1 p a:hover, .container .main-suppliers .cart-section .items h2 p a:hover, .container .main-suppliers .cart-section .items p p a:hover, .container .main-suppliers .cart-section .summary h1 p a:hover, .container .main-suppliers .cart-section .summary h2 p a:hover, .container .main-suppliers .cart-section .summary p p a:hover {
   cursor: pointer;
   color: #fe6047;
 }
 
-.container .main-customers .myEgeria-section .title .item, .container .main-customers .myEgeria-section .panel .item, .container .main-customers .notifications-section .title .item, .container .main-customers .notifications-section .panel .item, .container .main-suppliers .myEgeria-section .title .item, .container .main-suppliers .myEgeria-section .panel .item, .container .main-suppliers .notifications-section .title .item, .container .main-suppliers .notifications-section .panel .item {
+.container .main-customers .myEgeria-section .title .item, .container .main-customers .myEgeria-section .panel .item, .container .main-customers .myEgeria-section .items .item, .container .main-customers .myEgeria-section .summary .item, .container .main-customers .notifications-section .title .item, .container .main-customers .notifications-section .panel .item, .container .main-customers .notifications-section .items .item, .container .main-customers .notifications-section .summary .item, .container .main-customers .cart-section .title .item, .container .main-customers .cart-section .panel .item, .container .main-customers .cart-section .items .item, .container .main-customers .cart-section .summary .item, .container .main-suppliers .myEgeria-section .title .item, .container .main-suppliers .myEgeria-section .panel .item, .container .main-suppliers .myEgeria-section .items .item, .container .main-suppliers .myEgeria-section .summary .item, .container .main-suppliers .notifications-section .title .item, .container .main-suppliers .notifications-section .panel .item, .container .main-suppliers .notifications-section .items .item, .container .main-suppliers .notifications-section .summary .item, .container .main-suppliers .cart-section .title .item, .container .main-suppliers .cart-section .panel .item, .container .main-suppliers .cart-section .items .item, .container .main-suppliers .cart-section .summary .item {
   width: 100%;
   clear: both;
   display: -webkit-box;
@@ -1986,26 +1991,471 @@ body {
   position: relative;
 }
 
-.container .main-customers .myEgeria-section .title .item h1, .container .main-customers .myEgeria-section .panel .item h1, .container .main-customers .notifications-section .title .item h1, .container .main-customers .notifications-section .panel .item h1, .container .main-suppliers .myEgeria-section .title .item h1, .container .main-suppliers .myEgeria-section .panel .item h1, .container .main-suppliers .notifications-section .title .item h1, .container .main-suppliers .notifications-section .panel .item h1 {
+.container .main-customers .myEgeria-section .title .item h1, .container .main-customers .myEgeria-section .panel .item h1, .container .main-customers .myEgeria-section .items .item h1, .container .main-customers .myEgeria-section .summary .item h1, .container .main-customers .notifications-section .title .item h1, .container .main-customers .notifications-section .panel .item h1, .container .main-customers .notifications-section .items .item h1, .container .main-customers .notifications-section .summary .item h1, .container .main-customers .cart-section .title .item h1, .container .main-customers .cart-section .panel .item h1, .container .main-customers .cart-section .items .item h1, .container .main-customers .cart-section .summary .item h1, .container .main-suppliers .myEgeria-section .title .item h1, .container .main-suppliers .myEgeria-section .panel .item h1, .container .main-suppliers .myEgeria-section .items .item h1, .container .main-suppliers .myEgeria-section .summary .item h1, .container .main-suppliers .notifications-section .title .item h1, .container .main-suppliers .notifications-section .panel .item h1, .container .main-suppliers .notifications-section .items .item h1, .container .main-suppliers .notifications-section .summary .item h1, .container .main-suppliers .cart-section .title .item h1, .container .main-suppliers .cart-section .panel .item h1, .container .main-suppliers .cart-section .items .item h1, .container .main-suppliers .cart-section .summary .item h1 {
   margin-right: 16px;
   font-size: 1.6em;
 }
 
-.container .main-customers .myEgeria-section .title .item p, .container .main-customers .myEgeria-section .panel .item p, .container .main-customers .notifications-section .title .item p, .container .main-customers .notifications-section .panel .item p, .container .main-suppliers .myEgeria-section .title .item p, .container .main-suppliers .myEgeria-section .panel .item p, .container .main-suppliers .notifications-section .title .item p, .container .main-suppliers .notifications-section .panel .item p {
+.container .main-customers .myEgeria-section .title .item p, .container .main-customers .myEgeria-section .panel .item p, .container .main-customers .myEgeria-section .items .item p, .container .main-customers .myEgeria-section .summary .item p, .container .main-customers .notifications-section .title .item p, .container .main-customers .notifications-section .panel .item p, .container .main-customers .notifications-section .items .item p, .container .main-customers .notifications-section .summary .item p, .container .main-customers .cart-section .title .item p, .container .main-customers .cart-section .panel .item p, .container .main-customers .cart-section .items .item p, .container .main-customers .cart-section .summary .item p, .container .main-suppliers .myEgeria-section .title .item p, .container .main-suppliers .myEgeria-section .panel .item p, .container .main-suppliers .myEgeria-section .items .item p, .container .main-suppliers .myEgeria-section .summary .item p, .container .main-suppliers .notifications-section .title .item p, .container .main-suppliers .notifications-section .panel .item p, .container .main-suppliers .notifications-section .items .item p, .container .main-suppliers .notifications-section .summary .item p, .container .main-suppliers .cart-section .title .item p, .container .main-suppliers .cart-section .panel .item p, .container .main-suppliers .cart-section .items .item p, .container .main-suppliers .cart-section .summary .item p {
   font-size: 1em;
   font-family: 'Roboto', sans-serif;
 }
 
-.container .main-customers .myEgeria-section .title .item i, .container .main-customers .myEgeria-section .panel .item i, .container .main-customers .notifications-section .title .item i, .container .main-customers .notifications-section .panel .item i, .container .main-suppliers .myEgeria-section .title .item i, .container .main-suppliers .myEgeria-section .panel .item i, .container .main-suppliers .notifications-section .title .item i, .container .main-suppliers .notifications-section .panel .item i {
+.container .main-customers .myEgeria-section .title .item i, .container .main-customers .myEgeria-section .panel .item i, .container .main-customers .myEgeria-section .items .item i, .container .main-customers .myEgeria-section .summary .item i, .container .main-customers .notifications-section .title .item i, .container .main-customers .notifications-section .panel .item i, .container .main-customers .notifications-section .items .item i, .container .main-customers .notifications-section .summary .item i, .container .main-customers .cart-section .title .item i, .container .main-customers .cart-section .panel .item i, .container .main-customers .cart-section .items .item i, .container .main-customers .cart-section .summary .item i, .container .main-suppliers .myEgeria-section .title .item i, .container .main-suppliers .myEgeria-section .panel .item i, .container .main-suppliers .myEgeria-section .items .item i, .container .main-suppliers .myEgeria-section .summary .item i, .container .main-suppliers .notifications-section .title .item i, .container .main-suppliers .notifications-section .panel .item i, .container .main-suppliers .notifications-section .items .item i, .container .main-suppliers .notifications-section .summary .item i, .container .main-suppliers .cart-section .title .item i, .container .main-suppliers .cart-section .panel .item i, .container .main-suppliers .cart-section .items .item i, .container .main-suppliers .cart-section .summary .item i {
   position: absolute;
   right: 0;
 }
 
-.container .main-customers .myEgeria-section .panel, .container .main-customers .notifications-section .panel, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .notifications-section .panel {
+.container .main-customers .myEgeria-section .panel, .container .main-customers .myEgeria-section .items, .container .main-customers .notifications-section .panel, .container .main-customers .notifications-section .items, .container .main-customers .cart-section .panel, .container .main-customers .cart-section .items, .container .main-suppliers .myEgeria-section .panel, .container .main-suppliers .myEgeria-section .items, .container .main-suppliers .notifications-section .panel, .container .main-suppliers .notifications-section .items, .container .main-suppliers .cart-section .panel, .container .main-suppliers .cart-section .items {
   display: -ms-grid;
   display: grid;
   gap: 16px;
   align-self: flex-start;
+}
+
+.container .main-customers .cart-section, .container .main-suppliers .cart-section {
+  clear: both;
+  background-color: unset;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: ()[auto-fit];
+      grid-template-columns: repeat(auto-fit);
+  gap: 16px;
+}
+
+.container .main-customers .cart-section .title, .container .main-suppliers .cart-section .title {
+  margin-bottom: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .cart-section .title h1, .container .main-suppliers .cart-section .title h1 {
+  font-family: 'overpass', sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.container .main-customers .cart-section .items, .container .main-suppliers .cart-section .items {
+  margin-bottom: unset;
+}
+
+.container .main-customers .cart-section .items .item, .container .main-suppliers .cart-section .items .item {
+  width: 100%;
+  clear: both;
+  border-bottom: 1px solid #8489c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 8px;
+}
+
+.container .main-customers .cart-section .items .item:last-of-type, .container .main-suppliers .cart-section .items .item:last-of-type {
+  border-bottom: none;
+}
+
+.container .main-customers .cart-section .items .item .img-box, .container .main-suppliers .cart-section .items .item .img-box {
+  margin: unset;
+  padding: unset;
+  width: 75px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .cart-section .items .item .img-box i, .container .main-suppliers .cart-section .items .item .img-box i {
+  font-size: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #5960cb;
+}
+
+.container .main-customers .cart-section .items .item .description-box, .container .main-suppliers .cart-section .items .item .description-box {
+  padding-left: 8px;
+  width: calc(100% - 75px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .cart-section .items .item .description-box .st-line, .container .main-suppliers .cart-section .items .item .description-box .st-line {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 4px;
+}
+
+.container .main-customers .cart-section .items .item .description-box .st-line h4, .container .main-suppliers .cart-section .items .item .description-box .st-line h4 {
+  color: #1E262D;
+}
+
+.container .main-customers .cart-section .items .item .description-box small, .container .main-suppliers .cart-section .items .item .description-box small {
+  color: #717171;
+  margin-bottom: 4px;
+}
+
+.container .main-customers .cart-section .items .item .description-box h6, .container .main-suppliers .cart-section .items .item .description-box h6 {
+  color: #717171;
+  margin-top: 4px;
+}
+
+.container .main-customers .cart-section .items .item .description-box select, .container .main-suppliers .cart-section .items .item .description-box select {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  outline: none;
+  width: 35px;
+  height: 2em;
+  border: 1px solid lightgray;
+  font-size: 0.8em;
+  background: whitesmoke;
+  border-radius: 2px;
+}
+
+.container .main-customers .cart-section .items .item .description-box select option, .container .main-suppliers .cart-section .items .item .description-box select option {
+  background: lightgrey;
+  color: #000;
+}
+
+.container .main-customers .cart-section .summary, .container .main-suppliers .cart-section .summary {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: unset;
+}
+
+.container .main-customers .cart-section .summary h1, .container .main-suppliers .cart-section .summary h1 {
+  font-family: 'Overpass', sans-serif;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.container .main-customers .cart-section .summary .code, .container .main-suppliers .cart-section .summary .code {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 8px;
+}
+
+.container .main-customers .cart-section .summary .code input, .container .main-suppliers .cart-section .summary .code input {
+  width: calc(80% - 4px);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  clear: both;
+  padding: 4px 8px;
+  font-size: 1em;
+  border: 1px solid #8489c9;
+  background: #fff;
+}
+
+.container .main-customers .cart-section .summary .code input::-webkit-input-placeholder, .container .main-suppliers .cart-section .summary .code input::-webkit-input-placeholder {
+  color: #8489c9;
+}
+
+.container .main-customers .cart-section .summary .code input:-ms-input-placeholder, .container .main-suppliers .cart-section .summary .code input:-ms-input-placeholder {
+  color: #8489c9;
+}
+
+.container .main-customers .cart-section .summary .code input::-ms-input-placeholder, .container .main-suppliers .cart-section .summary .code input::-ms-input-placeholder {
+  color: #8489c9;
+}
+
+.container .main-customers .cart-section .summary .code input::placeholder, .container .main-suppliers .cart-section .summary .code input::placeholder {
+  color: #8489c9;
+}
+
+.container .main-customers .cart-section .summary .code button, .container .main-suppliers .cart-section .summary .code button {
+  width: calc(20% - 4px);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  clear: both;
+  padding: 4px 8px;
+  font-size: 1em;
+  border: 1px solid #fe6047;
+  background: #fff;
+  color: #fe6047;
+}
+
+.container .main-customers .cart-section .summary .purchase-detail, .container .main-suppliers .cart-section .summary .purchase-detail {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .main-customers .cart-section .summary .purchase-detail .line, .container .main-suppliers .cart-section .summary .purchase-detail .line {
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+}
+
+.container .main-customers .cart-section .summary .purchase-detail .line h5, .container .main-suppliers .cart-section .summary .purchase-detail .line h5 {
+  font-size: 0.9em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.container .main-customers .cart-section .summary .purchase-detail .line:nth-of-type(4) h5, .container .main-suppliers .cart-section .summary .purchase-detail .line:nth-of-type(4) h5 {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: 'poppins', sans-serif;
+}
+
+.container .main-customers .cart-section .summary .purchase-detail small, .container .main-suppliers .cart-section .summary .purchase-detail small {
+  margin: 4px 0;
+  color: lightgray;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.container .main-customers .cart-section .summary .terms-conditions, .container .main-suppliers .cart-section .summary .terms-conditions {
+  margin: 8px 0;
+  width: 100%;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main-customers .cart-section .summary .terms-conditions small, .container .main-suppliers .cart-section .summary .terms-conditions small {
+  color: lightgray;
+}
+
+.container .main-customers .cart-section .summary .checkout-btn, .container .main-suppliers .cart-section .summary .checkout-btn {
+  width: 100%;
+  clear: both;
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+.container .main-customers .cart-section .summary .checkout-btn .btn, .container .main-suppliers .cart-section .summary .checkout-btn .btn {
+  width: 100%;
+  max-width: 400px;
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fe6047;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.container .main-customers .cart-section .summary .checkout-btn .btn:active, .container .main-suppliers .cart-section .summary .checkout-btn .btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.container .main-customers .cart-section .summary .checkout-btn .btn i, .container .main-suppliers .cart-section .summary .checkout-btn .btn i {
+  color: #fff;
+  margin-right: 8px;
+}
+
+.container .main-customers .cart-section .summary .checkout-btn .btn a, .container .main-suppliers .cart-section .summary .checkout-btn .btn a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.container .main-customers .cart-section .empty-cart, .container .main-suppliers .cart-section .empty-cart {
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  min-height: 288px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.container .main-customers .cart-section .empty-cart i, .container .main-suppliers .cart-section .empty-cart i {
+  font-size: 6em;
+  color: lightslategray;
+  margin-bottom: 16px;
+}
+
+.container .main-customers .cart-section .empty-cart h4, .container .main-suppliers .cart-section .empty-cart h4 {
+  font-family: 'overpass', sans-serif;
+  font-weight: 400;
+  color: #717171;
+  color: lightslategrey;
+  margin-bottom: 32px;
+}
+
+.container .main-customers .cart-section .empty-cart .start-shopping-btn, .container .main-suppliers .cart-section .empty-cart .start-shopping-btn {
+  width: 100%;
+  max-width: 400px;
+  clear: both;
+  padding: 8px 0;
+  background-color: #fe6047;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .main-customers .cart-section .empty-cart .start-shopping-btn a, .container .main-suppliers .cart-section .empty-cart .start-shopping-btn a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: 'roboto', sans-serif;
 }
 
 .container .my-egeria {
@@ -2293,6 +2743,9 @@ body {
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
+  .container .main-customers .cart-section .title, .container .main-customers .cart-section .items, .container .main-customers .cart-section .summary, .container .main-suppliers .cart-section .title, .container .main-suppliers .cart-section .items, .container .main-suppliers .cart-section .summary {
+    padding: 32px 64px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -2320,6 +2773,9 @@ body {
   }
   .container .bottom-menu {
     display: none;
+  }
+  .container .main-customers, .container .main-suppliers {
+    min-height: calc(100vh - 75px);
   }
   .container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
     padding: 32px;
@@ -2360,6 +2816,33 @@ body {
   .container .main-customers .orders-section .orders-container .status-dashboard .filters form .nd-line .select select, .container .main-suppliers .orders-section .orders-container .status-dashboard .filters form .nd-line .select select {
     margin: unset;
     margin-left: 8px;
+  }
+  .container .main-customers .cart-section, .container .main-suppliers .cart-section {
+    -ms-grid-columns: 60% calc(100% - 60% - 16px);
+        grid-template-columns: 60% calc(100% - 60% - 16px);
+  }
+  .container .main-customers .cart-section .title, .container .main-suppliers .cart-section .title {
+    font-size: 1.2em;
+  }
+  .container .main-customers .cart-section .summary, .container .main-suppliers .cart-section .summary {
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 16px;
+    width: auto;
+  }
+  .container .main-customers .cart-section .title, .container .main-customers .cart-section .items, .container .main-customers .cart-section .summary, .container .main-suppliers .cart-section .title, .container .main-suppliers .cart-section .items, .container .main-suppliers .cart-section .summary {
+    padding: 16px 32px;
   }
   .container .notifications-section {
     display: none;
@@ -2437,22 +2920,22 @@ body {
 }
 
 @media screen and (min-width: 1240px) {
-  .container .left-panel {
+  #cart-tab:not(:checked) ~ .container .left-panel {
     max-width: 250px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .container .left-panel .switch-box {
+  #cart-tab:not(:checked) ~ .container .left-panel .switch-box {
     display: block;
   }
-  .container .left-panel .switch-box::before, .container .left-panel .switch-box::after {
+  #cart-tab:not(:checked) ~ .container .left-panel .switch-box::before, #cart-tab:not(:checked) ~ .container .left-panel .switch-box::after {
     display: block;
   }
-  .container .left-panel .img-box > i, .container .left-panel .img-box > i + p {
+  #cart-tab:not(:checked) ~ .container .left-panel .img-box > i, #cart-tab:not(:checked) ~ .container .left-panel .img-box > i + p {
     display: block;
     opacity: 1;
   }
-  .container .main-customers, .container .main-suppliers {
+  #cart-tab:not(:checked) ~ .container .main-customers, #cart-tab:not(:checked) ~ .container .main-suppliers {
     position: relative;
     left: 250px;
     width: calc(100% - 250px);
@@ -2461,14 +2944,18 @@ body {
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .container .main-customers .home-section, .container .main-customers .wishlist-section, .container .main-suppliers .home-section, .container .main-suppliers .wishlist-section {
+  #cart-tab:not(:checked) ~ .container .main-customers .home-section, #cart-tab:not(:checked) ~ .container .main-customers .wishlist-section, #cart-tab:not(:checked) ~ .container .main-suppliers .home-section, #cart-tab:not(:checked) ~ .container .main-suppliers .wishlist-section {
     padding: 32px;
   }
-  .container .main-customers .home-section .user-info .cards, .container .main-customers .home-section .wl-container .cards, .container .main-customers .wishlist-section .user-info .cards, .container .main-customers .wishlist-section .wl-container .cards, .container .main-suppliers .home-section .user-info .cards, .container .main-suppliers .home-section .wl-container .cards, .container .main-suppliers .wishlist-section .user-info .cards, .container .main-suppliers .wishlist-section .wl-container .cards {
+  #cart-tab:not(:checked) ~ .container .main-customers .home-section .user-info .cards, #cart-tab:not(:checked) ~ .container .main-customers .home-section .wl-container .cards, #cart-tab:not(:checked) ~ .container .main-customers .wishlist-section .user-info .cards, #cart-tab:not(:checked) ~ .container .main-customers .wishlist-section .wl-container .cards, #cart-tab:not(:checked) ~ .container .main-suppliers .home-section .user-info .cards, #cart-tab:not(:checked) ~ .container .main-suppliers .home-section .wl-container .cards, #cart-tab:not(:checked) ~ .container .main-suppliers .wishlist-section .user-info .cards, #cart-tab:not(:checked) ~ .container .main-suppliers .wishlist-section .wl-container .cards {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (220px)[4];
         grid-template-columns: repeat(4, 220px);
+  }
+  .container .main-customers .cart-section {
+    -ms-grid-columns: 1fr 550px;
+        grid-template-columns: 1fr 550px;
   }
   #home-tab:checked ~ .container .left-panel .img-box:nth-of-type(2),
   #orders-tab:checked ~ .container .left-panel .img-box:nth-of-type(3),
@@ -2485,6 +2972,13 @@ body {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .container .main-customers .cart-section {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 #home-tab:not(:checked) ~ .container main .home-section,
 #notification-tab:not(:checked) ~ .container main .notifications-section,
 #orders-tab:not(:checked) ~ .container main .orders-section,
@@ -2498,10 +2992,14 @@ body {
 #home-tab:checked ~ .container main .home-section,
 #notification-tab:checked ~ .container main .notifications-section,
 #orders-tab:checked ~ .container main .orders-section,
-#cart-tab:checked ~ .container main .home-section,
 #messages-tab:checked ~ .container main .messages-section,
 #wishList-tab:checked ~ .container main .wishlist-section {
   display: block;
+}
+
+#cart-tab:checked ~ .container main .cart-section {
+  display: -ms-grid;
+  display: grid;
 }
 
 #home-tab:checked ~ .container .bottom-menu .img-box:nth-of-type(1) i,

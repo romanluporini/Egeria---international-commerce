@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="/styles/user-menu.css">
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700;300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/css/all.min.css">
     
     <title>Usuarios | Menú principal</title>
 </head>
 <body>
 
-    <input type="radio" name="t" id="home-tab" checked>
+    <input type="radio" name="t" id="home-tab">
     <input type="radio" name="t" id="notification-tab">
     <input type="radio" name="t" id="orders-tab" >
-    <input type="radio" name="t" id="cart-tab">
+    <input type="radio" name="t" id="cart-tab" checked>
     <input type="radio" name="t" id="messages-tab">
     <input type="radio" name="t" id="wishList-tab">
     <input type="radio" name="t" id="myEgeria-tab" >
 
-    <input type="checkbox" name="" id="switch">
+    <input type="checkbox" name="" id="switch" checked>
 
     <div class="container">
         <nav>
@@ -976,6 +975,145 @@
                 </div>
             </section>
 
+            <section class="cart-section">
+
+                    <div class="title">
+                        <h1>Shopping cart <span>(3)</span></h1>
+                    </div>
+                    <div class="items">
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="description-box">
+
+                                <div class="st-line">
+                                    
+                                    <h4>Description</h4>
+                                    <h4>$16.00</h4>
+                                </div>
+                                <small>details</small>
+                                <small>details</small>
+                                <small>details</small>
+                                <h6>only 1 left!</h6>
+                                
+                                <select name="item-quantity" id="" class="quantity">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="description-box">
+
+                                <div class="st-line">
+                                    
+                                    <h4>Description</h4>
+                                    <h4>$16.00</h4>
+                                </div>
+                                <small>details</small>
+                                <small>details</small>
+                                <small>details</small>
+                                <h6>only 1 left!</h6>
+                                
+                                <select name="item-quantity" id="" class="quantity">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="description-box">
+
+                                <div class="st-line">
+                                    
+                                    <h4>Description</h4>
+                                    <h4>$16.00</h4>
+                                </div>
+                                <small>details</small>
+                                <small>details</small>
+                                <small>details</small>
+                                <h6>only 1 left!</h6>
+                                
+                                <select name="item-quantity" id="" class="quantity">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                            </div>
+
+                        </div>
+    
+                    </div>
+
+                    <div class="summary">
+                        <h1>Summary</h1>
+                        <div class="code">
+                            <input type="text" name="" id="" placeholder="type the code here">
+                            <button type="submit">use</button>
+                        </div>
+                        <div class="purchase-detail">
+
+                            <div class="line">
+                                <h5>Subtotal</h5>    
+                                <h5>$16.00</h5>
+                            </div>
+                            <div class="line">
+                                <h5>Shipping</h5>
+                                <h5>$16.00</h5>
+                            </div>
+                            <div class="line">
+                                <h5>Code</h5>
+                                <h5>-$16.00</h5>
+                            </div>
+                            <div class="line">
+                                <h5>Total</h5>
+                                <h5>$16.00</h5>
+                            </div>
+
+                            <small>*Aprox ARS1541,57</small>
+                        </div>
+                        <div class="terms-conditions">
+                            <small>If you choose to checkout you agree to all of our <a href="">terms</a>  and <a href="">privacy policy</a> </small>
+                        </div>
+
+                        <div class="checkout-btn">
+                            <div class="btn">
+                                <a href="/html/checkout.html"> <i class="fas fa-shopping-bag"></i>Checkout</a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h4>your shopping cart is empty</h4>
+        
+                        <div class="start-shopping-btn">
+                            <a href="/index.html">Start shopping now!</a>
+                        </div>
+                    </div>
+
+            </section>
         </main>
 
         <main class="main-suppliers">
@@ -1279,6 +1417,146 @@
 
                     </div>
 
+                </div>
+
+            </section>
+
+            <section class="cart-section">
+
+                <div class="title">
+                    <h1>Shopping cart <span>(3)</span></h1>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="img-box">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="description-box">
+
+                            <div class="st-line">
+                                
+                                <h4>Description</h4>
+                                <h4>$16.00</h4>
+                            </div>
+                            <small>details</small>
+                            <small>details</small>
+                            <small>details</small>
+                            <h6>only 1 left!</h6>
+                            
+                            <select name="item-quantity" id="" class="quantity">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="description-box">
+
+                            <div class="st-line">
+                                
+                                <h4>Description</h4>
+                                <h4>$16.00</h4>
+                            </div>
+                            <small>details</small>
+                            <small>details</small>
+                            <small>details</small>
+                            <h6>only 1 left!</h6>
+                            
+                            <select name="item-quantity" id="" class="quantity">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="img-box">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="description-box">
+
+                            <div class="st-line">
+                                
+                                <h4>Description</h4>
+                                <h4>$16.00</h4>
+                            </div>
+                            <small>details</small>
+                            <small>details</small>
+                            <small>details</small>
+                            <h6>only 1 left!</h6>
+                            
+                            <select name="item-quantity" id="" class="quantity">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="summary">
+                    <h1>Summary</h1>
+                    <div class="code">
+                        <input type="text" name="" id="" placeholder="type the code here">
+                        <button type="submit">use</button>
+                    </div>
+                    <div class="purchase-detail">
+
+                        <div class="line">
+                            <h5>Subtotal</h5>    
+                            <h5>$16.00</h5>
+                        </div>
+                        <div class="line">
+                            <h5>Shipping</h5>
+                            <h5>$16.00</h5>
+                        </div>
+                        <div class="line">
+                            <h5>Code</h5>
+                            <h5>-$16.00</h5>
+                        </div>
+                        <div class="line">
+                            <h5>Total</h5>
+                            <h5>$16.00</h5>
+                        </div>
+
+                        <small>*Aprox ARS1541,57</small>
+                    </div>
+                    <div class="terms-conditions">
+                        <small>If you choose to checkout you agree to all of our <a href="">terms</a>  and <a href="">privacy policy</a> </small>
+                    </div>
+
+                    <div class="checkout-btn">
+                        <div class="btn">
+                            <a href="/html/checkout.html"> <i class="fas fa-shopping-bag"></i>Checkout</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>your shopping cart is empty</h4>
+    
+                    <div class="start-shopping-btn">
+                        <a href="/index.html">Start shopping now!</a>
+                    </div>
                 </div>
 
             </section>
